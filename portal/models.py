@@ -6,16 +6,19 @@ class Imovel(models.Model):
     bairro = models.ForeignKey('Bairro')
     quartos = models.IntegerField()
     banheiro = models.IntegerField()
-    vagasGaragem = models.IntegerField()
+    vagas_garagem = models.IntegerField()
     valor = models.DecimalField(max_digits=8, decimal_places=2)
-    areaConstruida = models.DecimalField(max_digits=8, decimal_places=2)
-    areaTotal = models.DecimalField(max_digits=8, decimal_places=2)
+    area_construida = models.DecimalField(max_digits=8, decimal_places=2)
+    area_total = models.DecimalField(max_digits=8, decimal_places=2)
     tipo = models.ForeignKey('TipoImovel')
     descricao = models.TextField()
     data_inclusao = models.DateTimeField(
             default=timezone.now)
     data_divulgacao = models.DateTimeField(
             blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Imoveis"
 
     def divulgacao(self):
         self.data_divulgacao = timezone.now()
@@ -30,6 +33,9 @@ class TipoImovel(models.Model):
     descricao = models.TextField()
     data_inclusao = models.DateTimeField(
             default=timezone.now)
+
+    class Meta:
+        verbose_name_plural = "Tipo Imoveis"
 
     def __str__(self):
         return self.descricao
