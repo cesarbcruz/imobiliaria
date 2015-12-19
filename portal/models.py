@@ -15,6 +15,7 @@ def sample_upload_to_function(instance, filename):
 class Imovel(models.Model):
     author = models.ForeignKey('auth.User')
     bairro = models.ForeignKey('Bairro')
+    logradouro =  models.TextField()
     quartos = models.IntegerField()
     banheiro = models.IntegerField()
     vagas_garagem = models.IntegerField()
@@ -46,7 +47,7 @@ class Imovel(models.Model):
         self.save()
 
     def __str__(self):
-        return self.tipo.descricao
+        return self.tipo.descricao+" - "+self.bairro.descricao+" - "+self.logradouro
 
 
 class TipoImovel(models.Model):
