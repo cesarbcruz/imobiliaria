@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html class="html" lang="pt-BR">
  <head>
@@ -10,9 +11,9 @@
   <meta name="generator" content="2015.0.2.310"/>
   <title>Documentos</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?4052507572"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-mestre.css?4095606047"/>
-  <link rel="stylesheet" type="text/css" href="css/documentos.css?3865014915" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/site_global.css'%}?4052507572"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/master_a-mestre.css'%}?4095606047"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/documentos.css'%}?3865014915" id="pagesheet"/>
   <!-- Other scripts -->
   <script type="text/javascript">
    document.documentElement.className += ' js';
@@ -31,30 +32,30 @@
       <p>&nbsp;</p>
      </div>
      <div class="clip_frame grpelem" id="u111"><!-- image -->
-      <img class="block" id="u111_img" src="images/logo-corret.png" alt="" width="254" height="70"/>
+      <img class="block" id="u111_img" src="{% static 'images/logo-corret.png'%}" alt="" width="254" height="70"/>
      </div>
      <div class="clearfix grpelem" id="u118-4"><!-- content -->
       <p>Abrindo portas com você</p>
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu354"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u355"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u358" href="index.html" data-href="page:U74"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u361-4"><!-- content --><p>Home</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u358" href="{% url 'portal.views.home'%}" data-href="page:U74"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u361-4"><!-- content --><p>Home</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u448"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u458" href="cadastre-seu-im%c3%b3vel.html" data-href="page:U447"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u461-4"><!-- content --><p>Cadastre seu Imóvel</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u458" href="{% url 'portal.views.cadastre_seu_imovel'%}" data-href="page:U447"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u461-4"><!-- content --><p>Cadastre seu Imóvel</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u423"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u433" href="documentos.html" data-href="page:U422"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u436-4"><!-- content --><p>Documentos</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u433" href="{% url 'portal.views.documentos'%}" data-href="page:U422"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u436-4"><!-- content --><p>Documentos</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u474"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u484" href="simule-seu-financiamento.html" data-href="page:U473"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u487-4"><!-- content --><p>Simule seu Financiamento</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u484" href="{% url 'portal.views.simule_seu_financiamento'%}" data-href="page:U473"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u487-4"><!-- content --><p>Simule seu Financiamento</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u399"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u409" href="contatos.html" data-href="page:U398"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u412-4"><!-- content --><p>Contatos</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u409" href="{% url 'portal.views.contatos'%}" data-href="page:U398"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u412-4"><!-- content --><p>Contatos</p></div></a>
       </div>
      </nav>
      <div class="clip_frame grpelem" id="u612"><!-- image -->
-      <img class="block" id="u612_img" src="images/telefone.png" alt="" width="134" height="23"/>
+      <img class="block" id="u612_img" src="{% static 'images/telefone.png'%}" alt="" width="134" height="23"/>
      </div>
      <div class="clearfix grpelem" id="u1542-4"><!-- content -->
       <p>Creci PJ 25.177</p>
@@ -67,7 +68,7 @@
         <p>Aluguel</p>
        </div>
        <div class="clip_frame grpelem" id="u638"><!-- image -->
-        <img class="block" id="u638_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u638_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u648"><!-- group -->
@@ -75,7 +76,7 @@
         <p>Tipo de Imóvel</p>
        </div>
        <div class="clip_frame grpelem" id="u644"><!-- image -->
-        <img class="block" id="u644_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u644_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u653"><!-- group -->
@@ -83,7 +84,7 @@
         <p>Valor Mínimo</p>
        </div>
        <div class="clip_frame grpelem" id="u649"><!-- image -->
-        <img class="block" id="u649_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u649_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u660"><!-- group -->
@@ -91,7 +92,7 @@
         <p>Valor Máximo</p>
        </div>
        <div class="clip_frame grpelem" id="u657"><!-- image -->
-        <img class="block" id="u657_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u657_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u2125"><!-- group -->
@@ -99,7 +100,7 @@
         <p>Bairro</p>
        </div>
        <div class="clip_frame grpelem" id="u2126"><!-- image -->
-        <img class="block" id="u2126_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u2126_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
      </div>
@@ -201,16 +202,17 @@
   <script type="text/javascript">
    window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 </script>
-  <script src="scripts/museutils.js?275725342" type="text/javascript"></script>
-  <script src="scripts/jquery.musepolyfill.bgsize.js?185257658" type="text/javascript"></script>
-  <script src="scripts/jquery.musemenu.js?4042164668" type="text/javascript"></script>
-  <script src="scripts/jquery.watch.js?3999102769" type="text/javascript"></script>
+  <script src="{% static 'scripts/museutils.js'%}?275725342" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.musepolyfill.bgsize.js'%}?185257658" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.musemenu.js'%}?4042164668" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.watch.js'%}?3999102769" type="text/javascript"></script>
   <!-- Other scripts -->
   <script type="text/javascript">
    $(document).ready(function() { try {
 (function(){var a={},b=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),16);return 0};(function(){$('link[type="text/css"]').each(function(){var b=($(this).attr("href")||"").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);b&&b[1]&&b[2]&&(a[b[1]]=b[2])})})();(function(){$("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
 for(var c=$(".version"),d=0;d<Muse.assets.required.length;){var f=Muse.assets.required[d],g=f.match(/([\w\-\.]+)\.(\w+)$/),k=g&&g[1]?g[1]:null,g=g&&g[2]?g[2]:null;switch(g.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");c.addClass(k);var g=b(c.css("color")),h=b(c.css("background-color"));g!=0||h!=0?(Muse.assets.required.splice(d,1),"undefined"!=typeof a[f]&&(g!=a[f]>>>24||h!=(a[f]&16777215))&&Muse.assets.outOfDate.push(f)):d++;c.removeClass(k);break;case "js":k.match(/^jquery-[\d\.]+/gi)&&
-typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Alguns arquivos no servidor podem estar ausentes ou incorretos. Limpe o cache do navegador e tente novamente. Se o problema persistir, entre em contato com o autor do site.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();/* body */
+typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Alguns arquivos no servidor podem estar ausentes ou incorretos. Limpe o cache do navegador e tente novamente. Se o problema persistir, entre em contato com o autor do site.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();
+/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */

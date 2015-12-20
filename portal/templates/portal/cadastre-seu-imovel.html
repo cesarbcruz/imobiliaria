@@ -32,30 +32,30 @@
       <p>&nbsp;</p>
      </div>
      <div class="clip_frame grpelem" id="u111"><!-- image -->
-      <img class="block" id="u111_img" src="images/logo-corret.png" alt="" width="254" height="70"/>
+      <img class="block" id="u111_img" src="{% static 'images/logo-corret.png'%}" alt="" width="254" height="70"/>
      </div>
      <div class="clearfix grpelem" id="u118-4"><!-- content -->
       <p>Abrindo portas com você</p>
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu354"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u355"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u358" href="index.html" data-href="page:U74"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u361-4"><!-- content --><p>Home</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u358" href="{% url 'portal.views.home'%}" data-href="page:U74"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u361-4"><!-- content --><p>Home</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u448"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u458" href="cadastre-seu-im%c3%b3vel.html" data-href="page:U447"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u461-4"><!-- content --><p>Cadastre seu Imóvel</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u458" href="{% url 'portal.views.cadastre_seu_imovel'%}" data-href="page:U447"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u461-4"><!-- content --><p>Cadastre seu Imóvel</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u423"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u433" href="documentos.html" data-href="page:U422"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u436-4"><!-- content --><p>Documentos</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u433" href="{% url 'portal.views.documentos'%}" data-href="page:U422"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u436-4"><!-- content --><p>Documentos</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u474"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u484" href="simule-seu-financiamento.html" data-href="page:U473"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u487-4"><!-- content --><p>Simule seu Financiamento</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u484" href="{% url 'portal.views.simule_seu_financiamento'%}" data-href="page:U473"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u487-4"><!-- content --><p>Simule seu Financiamento</p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u399"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u409" href="contatos.html" data-href="page:U398"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u412-4"><!-- content --><p>Contatos</p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u409" href="{% url 'portal.views.contatos'%}" data-href="page:U398"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u412-4"><!-- content --><p>Contatos</p></div></a>
       </div>
      </nav>
      <div class="clip_frame grpelem" id="u612"><!-- image -->
-      <img class="block" id="u612_img" src="images/telefone.png" alt="" width="134" height="23"/>
+      <img class="block" id="u612_img" src="{% static 'images/telefone.png'%}" alt="" width="134" height="23"/>
      </div>
      <div class="clearfix grpelem" id="u1542-4"><!-- content -->
       <p>Creci PJ 25.177</p>
@@ -68,7 +68,7 @@
         <p>Aluguel</p>
        </div>
        <div class="clip_frame grpelem" id="u638"><!-- image -->
-        <img class="block" id="u638_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u638_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u648"><!-- group -->
@@ -76,7 +76,7 @@
         <p>Tipo de Imóvel</p>
        </div>
        <div class="clip_frame grpelem" id="u644"><!-- image -->
-        <img class="block" id="u644_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u644_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u653"><!-- group -->
@@ -84,7 +84,7 @@
         <p>Valor Mínimo</p>
        </div>
        <div class="clip_frame grpelem" id="u649"><!-- image -->
-        <img class="block" id="u649_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u649_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u660"><!-- group -->
@@ -92,7 +92,7 @@
         <p>Valor Máximo</p>
        </div>
        <div class="clip_frame grpelem" id="u657"><!-- image -->
-        <img class="block" id="u657_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u657_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
       <div class="clearfix grpelem" id="u2125"><!-- group -->
@@ -100,7 +100,7 @@
         <p>Bairro</p>
        </div>
        <div class="clip_frame grpelem" id="u2126"><!-- image -->
-        <img class="block" id="u2126_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+        <img class="block" id="u2126_img" src="{% static 'images/botao_baixo.png'%}" alt="" width="36" height="13"/>
        </div>
       </div>
      </div>
@@ -214,9 +214,9 @@
       </div>
       <!-- /m_editable -->
      </div>
-     <img class="grpelem" id="u924" alt="Enviando formulário…" src="images/blank.gif"/><!-- state-based BG images -->
-     <img class="grpelem" id="u937" alt="O servidor encontrou um erro." src="images/blank.gif"/><!-- state-based BG images -->
-     <img class="grpelem" id="u943" alt="Formulário recebido." src="images/blank.gif"/><!-- state-based BG images -->
+     <img class="grpelem" id="u924" alt="Enviando formulário…" src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
+     <img class="grpelem" id="u937" alt="O servidor encontrou um erro." src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
+     <img class="grpelem" id="u943" alt="Formulário recebido." src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
      <input class="submit-btn NoWrap grpelem" id="u942-17" type="submit" value="" tabindex="21"/><!-- state-based BG images -->
      <div class="fld-grp clearfix grpelem" id="widgetu1281" data-required="true" data-type="radiogroup"><!-- none box -->
       <!-- m_editable region-id="editable-static-tag-U1282" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
@@ -557,24 +557,24 @@
    </div>
   </div>
   <div class="preload_images">
-   <img class="preload" src="images/u924-fs.png" alt=""/>
-   <img class="preload" src="images/u937-fse.png" alt=""/>
-   <img class="preload" src="images/u943-fss.png" alt=""/>
-   <img class="preload" src="images/u942-17-r.png" alt=""/>
-   <img class="preload" src="images/u942-17-m.png" alt=""/>
-   <img class="preload" src="images/u942-17-fs.png" alt=""/>
-   <img class="preload" src="images/radiobuttonunchecked.png" alt=""/>
-   <img class="preload" src="images/radiobuttonuncheckedrollover.png" alt=""/>
-   <img class="preload" src="images/radiobuttonuncheckedmousedown.png" alt=""/>
-   <img class="preload" src="images/radiobuttonchecked.png" alt=""/>
-   <img class="preload" src="images/radiobuttoncheckedrollover.png" alt=""/>
-   <img class="preload" src="images/radiobuttoncheckedmousedown.png" alt=""/>
-   <img class="preload" src="images/checkboxunchecked.jpg" alt=""/>
-   <img class="preload" src="images/checkboxuncheckedrollover.jpg" alt=""/>
-   <img class="preload" src="images/checkboxuncheckedmousedown.jpg" alt=""/>
-   <img class="preload" src="images/checkboxchecked.jpg" alt=""/>
-   <img class="preload" src="images/checkboxcheckedrollover.jpg" alt=""/>
-   <img class="preload" src="images/checkboxcheckedmousedown.jpg" alt=""/>
+   <img class="preload" src="{% static 'images/u924-fs.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/u937-fse.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/u943-fss.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/u942-17-r.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/u942-17-m.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/u942-17-fs.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttonunchecked.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttonuncheckedrollover.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttonuncheckedmousedown.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttonchecked.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttoncheckedrollover.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/radiobuttoncheckedmousedown.png'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxunchecked.jpg'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxuncheckedrollover.jpg'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxuncheckedmousedown.jpg'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxchecked.jpg'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxcheckedrollover.jpg'%}" alt=""/>
+   <img class="preload" src="{% static 'images/checkboxcheckedmousedown.jpg'%}" alt=""/>
   </div>
   <!-- JS includes -->
   <script type="text/javascript">
@@ -583,12 +583,12 @@
   <script type="text/javascript">
    window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 </script>
-  <script src="scripts/museutils.js?275725342" type="text/javascript"></script>
-  <script src="scripts/jquery.musepolyfill.bgsize.js?185257658" type="text/javascript"></script>
-  <script src="scripts/jquery.scrolleffects.js?206645848" type="text/javascript"></script>
-  <script src="scripts/jquery.musemenu.js?4042164668" type="text/javascript"></script>
-  <script src="scripts/webpro.js?3883484123" type="text/javascript"></script>
-  <script src="scripts/jquery.watch.js?3999102769" type="text/javascript"></script>
+  <script src="{% static 'scripts/museutils.js'%}?275725342" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.musepolyfill.bgsize.js'%}?185257658" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.scrolleffects.js'%}?206645848" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.musemenu.js'%}?4042164668" type="text/javascript"></script>
+  <script src="{% static 'scripts/webpro.js'%}?3883484123" type="text/javascript"></script>
+  <script src="{% static 'scripts/jquery.watch.js'%}?3999102769" type="text/javascript"></script>
   <!-- Other scripts -->
   <script type="text/javascript">
    $(document).ready(function() { try {
