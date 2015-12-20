@@ -1,0 +1,96 @@
+<manifest alg="2" build="2015.0.2.310" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="corretaimov.com.br" resolutions="1x" timestamp="1449593221728">
+  <folder name="css">
+    <file name="site_global.css" crc="4052507572"/>
+    <file name="master_a-mestre.css" crc="4095606047" ref="cadastre-seu-imóvel:contatos:documentos:index:simule-seu-financiamento"/>
+    <file name="cadastre-seu-im_vel.css" crc="8638595" ref="cadastre-seu-imóvel"/>
+    <file name="contatos.css" crc="4223263920" ref="contatos"/>
+    <file name="documentos.css" crc="3865014915" ref="documentos"/>
+    <file name="index.css" crc="3824953" ref="index"/>
+    <file name="simule-seu-financiamento.css" crc="403648575" ref="simule-seu-financiamento"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="196614522" ref="phone>index:phone>imóveis:phone>cadastre-seu-imóvel:phone>documentos:phone>simuladores:phone>contatos:index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="museutils.js" crc="275725342" ref="phone>index:phone>imóveis:phone>cadastre-seu-imóvel:phone>documentos:phone>simuladores:phone>contatos:index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="pie.js" crc="3827607177" ref="phone>index:phone>imóveis:phone>cadastre-seu-imóvel:phone>documentos:phone>simuladores:phone>contatos:index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="jquery.watch.js" crc="3999102769" ref="phone>index:phone>imóveis:phone>cadastre-seu-imóvel:phone>documentos:phone>simuladores:phone>contatos:index:contatos:documentos:cadastre-seu-imóvel"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="185257658" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="jquery.scrolleffects.js" crc="206645848" ref="index:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="jquery.musemenu.js" crc="4042164668" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="webpro.js" crc="3883484123" ref="contatos:cadastre-seu-imóvel:index"/>
+    <file name="form_check.php" crc="3932029206" ref="contatos:cadastre-seu-imóvel"/>
+    <file name="form_throttle.php" crc="314685628" ref="contatos:cadastre-seu-imóvel"/>
+    <file name="form_process.php" crc="401030677" ref="contatos:cadastre-seu-imóvel"/>
+    <file name="form-u761.php" crc="210195838" ref="contatos"/>
+    <file name="form-u907.php" crc="15986436" ref="cadastre-seu-imóvel"/>
+    <file name="musewpslideshow.js" crc="360574455" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="342093292" ref="index"/>
+    <file name="touchswipe.js" crc="4218319045" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="foto limeira.jpg" crc="61985482" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="logo-corret.png" crc="4216171498" seo="true" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="telefone.png" crc="3938661529" seo="true" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="botao_baixo.png" crc="3894871437" seo="true" ref="index:contatos:documentos:cadastre-seu-imóvel:simule-seu-financiamento"/>
+    <file name="u777-17.png" crc="105946463" ref="contatos"/>
+    <file name="u777-17-r.png" crc="516225493" ref="contatos"/>
+    <file name="u777-17-m.png" crc="84802736" ref="contatos"/>
+    <file name="u777-17-fs.png" crc="33839994" ref="contatos"/>
+    <file name="blank.gif" crc="4208392903" ref="cadastre-seu-imóvel:index"/>
+    <file name="u924-fs.png" crc="464675070" ref="cadastre-seu-imóvel"/>
+    <file name="u937-fse.png" crc="4085179034" ref="cadastre-seu-imóvel"/>
+    <file name="u943-fss.png" crc="314211812" ref="cadastre-seu-imóvel"/>
+    <file name="u942-17.png" crc="500872491" ref="cadastre-seu-imóvel"/>
+    <file name="u942-17-r.png" crc="363276369" ref="cadastre-seu-imóvel"/>
+    <file name="u942-17-m.png" crc="3761307959" ref="cadastre-seu-imóvel"/>
+    <file name="u942-17-fs.png" crc="12788882" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttonunchecked.png" crc="232010369" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttonuncheckedrollover.png" crc="173297973" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttonuncheckedmousedown.png" crc="210422217" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttonchecked.png" crc="424951658" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttoncheckedrollover.png" crc="135556972" ref="cadastre-seu-imóvel"/>
+    <file name="radiobuttoncheckedmousedown.png" crc="475385202" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxunchecked.jpg" crc="3783961257" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxuncheckedrollover.jpg" crc="3898835355" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxuncheckedmousedown.jpg" crc="4019589203" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxchecked.jpg" crc="3760363524" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxcheckedrollover.jpg" crc="3914243265" ref="cadastre-seu-imóvel"/>
+    <file name="checkboxcheckedmousedown.jpg" crc="350609565" ref="cadastre-seu-imóvel"/>
+    <file name="logo-caixa.png" crc="267299248" seo="true" ref="simule-seu-financiamento"/>
+    <file name="logo-bb.jpg" crc="4167632209" seo="true" ref="simule-seu-financiamento"/>
+    <file name="logo_bradesco.png" crc="4216645609" seo="true" ref="simule-seu-financiamento"/>
+    <file name="casa-aluguel1.jpg" crc="3864547399" seo="true" ref="index"/>
+    <file name="imoveis-11.jpg" crc="267607590" seo="true" ref="index"/>
+    <file name="imovel.jpg" crc="4218622291" seo="true" ref="index"/>
+    <file name="p17l0kptdh1pdab9t1d9s1r3o8da5.jpg" crc="327849177" seo="true" ref="index"/>
+    <file name="01.jpg" crc="4175377480" seo="true" ref="index"/>
+    <file name="casa-aluguel160x45.jpg" crc="37797970" seo="true" ref="index"/>
+    <file name="imoveis-1160x45.jpg" crc="283306740" seo="true" ref="index"/>
+    <file name="imovel60x45.jpg" crc="3869426123" seo="true" ref="index"/>
+    <file name="p17l0kptdh1pdab9t1d9s1r3o8da572x45.jpg" crc="3991405639" seo="true" ref="index"/>
+    <file name="0169x45.jpg" crc="3977989386" seo="true" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="logo-santander.jpg" crc="113244639" seo="true" ref="simule-seu-financiamento"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="documentos.css" crc="3867245963" ref="phone>documentos"/>
+      <file name="cadastre-seu-im_vel.css" crc="3867245963" ref="phone>cadastre-seu-imóvel"/>
+      <file name="index.css" crc="3867245963" ref="phone>index"/>
+      <file name="simuladores.css" crc="3867245963" ref="phone>simuladores"/>
+      <file name="im_veis.css" crc="3867245963" ref="phone>imóveis"/>
+      <file name="contatos.css" crc="3867245963" ref="phone>contatos"/>
+    </folder>
+    <file name="index.html" crc="4095036844" seo="true" mt="1446227663112" redirect="false"/>
+    <file name="imóveis.html" crc="80534385" seo="true" mt="1446815782086" redirect="false"/>
+    <file name="cadastre-seu-imóvel.html" crc="287076716" seo="true" mt="1446227663236" redirect="false"/>
+    <file name="documentos.html" crc="217628011" seo="true" mt="1446227663298" redirect="false"/>
+    <file name="simuladores.html" crc="422210903" seo="true" mt="1447261785374" redirect="false"/>
+    <file name="contatos.html" crc="4193671957" seo="true" mt="1446227663422" redirect="false"/>
+  </folder>
+  <file name="index.html" crc="4206449811" seo="true" mt="1448624644738" redirect="true"/>
+  <file name="contatos.html" crc="373439445" seo="true" mt="1448624644738" redirect="true"/>
+  <file name="documentos.html" crc="467310347" seo="true" mt="1448624644738" redirect="true"/>
+  <file name="cadastre-seu-imóvel.html" crc="4005555622" seo="true" mt="1448624644738" redirect="true"/>
+  <file name="simule-seu-financiamento.html" crc="4128632781" seo="true" mt="1448624644738" redirect="true"/>
+</manifest>

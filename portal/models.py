@@ -47,7 +47,7 @@ class Imovel(models.Model):
         self.save()
 
     def __str__(self):
-        return self.tipo.descricao+" - "+self.bairro.descricao+" - "+self.logradouro
+        return self.tipo.descricao+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+", "+self.logradouro
 
 
 class TipoImovel(models.Model):
@@ -81,4 +81,4 @@ class Bairro(models.Model):
         default=timezone.now)
 
     def __str__(self):
-        return self.descricao
+        return self.descricao+", "+self.cidade.descricao

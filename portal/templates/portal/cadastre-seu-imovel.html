@@ -1,0 +1,610 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="html" lang="pt-BR">
+ <head>
+
+  <script type="text/javascript">
+   if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "jquery.watch.js", "jquery.musepolyfill.bgsize.js", "jquery.scrolleffects.js", "jquery.musemenu.js", "webpro.js", "cadastre-seu-im_vel.css"], "outOfDate":[]};
+</script>
+  
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2015.0.2.310"/>
+  <title>Cadastre seu Imóvel</title>
+  <!-- CSS -->
+  <link rel="stylesheet"  href="{% static 'css/site_global.css' %}?4052507572"/>
+  <link rel="stylesheet"  href="{% static 'css/master_a-mestre.css' %}?4095606047"/>
+  <link rel="stylesheet"  href="{% static 'css/cadastre-seu-imovel.css'%}?8638595" id="pagesheet"/>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   document.documentElement.className += ' js';
+</script>
+  <!-- JS includes -->
+  <!--[if lt IE 9]>
+  <script src="scripts/html5shiv.js?4241844378" type="text/javascript"></script>
+  <![endif]-->
+   </head>
+ <body class="museBGSize">
+
+  <div class="shadow rgba-background clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+    <div class="clearfix colelem" id="pu353-3"><!-- group -->
+     <div class="clearfix grpelem" id="u353-3"><!-- content -->
+      <p>&nbsp;</p>
+     </div>
+     <div class="clip_frame grpelem" id="u111"><!-- image -->
+      <img class="block" id="u111_img" src="images/logo-corret.png" alt="" width="254" height="70"/>
+     </div>
+     <div class="clearfix grpelem" id="u118-4"><!-- content -->
+      <p>Abrindo portas com você</p>
+     </div>
+     <nav class="MenuBar clearfix grpelem" id="menuu354"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem" id="u355"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u358" href="index.html" data-href="page:U74"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u361-4"><!-- content --><p>Home</p></div></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u448"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u458" href="cadastre-seu-im%c3%b3vel.html" data-href="page:U447"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u461-4"><!-- content --><p>Cadastre seu Imóvel</p></div></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u423"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u433" href="documentos.html" data-href="page:U422"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u436-4"><!-- content --><p>Documentos</p></div></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u474"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u484" href="simule-seu-financiamento.html" data-href="page:U473"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u487-4"><!-- content --><p>Simule seu Financiamento</p></div></a>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u399"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u409" href="contatos.html" data-href="page:U398"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u412-4"><!-- content --><p>Contatos</p></div></a>
+      </div>
+     </nav>
+     <div class="clip_frame grpelem" id="u612"><!-- image -->
+      <img class="block" id="u612_img" src="images/telefone.png" alt="" width="134" height="23"/>
+     </div>
+     <div class="clearfix grpelem" id="u1542-4"><!-- content -->
+      <p>Creci PJ 25.177</p>
+     </div>
+    </div>
+    <div class="clearfix colelem" id="u125"><!-- group -->
+     <div class="clearfix grpelem" id="u2133"><!-- group -->
+      <div class="clearfix grpelem" id="u635"><!-- group -->
+       <div class="clearfix grpelem" id="u636-4"><!-- content -->
+        <p>Aluguel</p>
+       </div>
+       <div class="clip_frame grpelem" id="u638"><!-- image -->
+        <img class="block" id="u638_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u648"><!-- group -->
+       <div class="clearfix grpelem" id="u647-4"><!-- content -->
+        <p>Tipo de Imóvel</p>
+       </div>
+       <div class="clip_frame grpelem" id="u644"><!-- image -->
+        <img class="block" id="u644_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u653"><!-- group -->
+       <div class="clearfix grpelem" id="u652-4"><!-- content -->
+        <p>Valor Mínimo</p>
+       </div>
+       <div class="clip_frame grpelem" id="u649"><!-- image -->
+        <img class="block" id="u649_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u660"><!-- group -->
+       <div class="clearfix grpelem" id="u656-4"><!-- content -->
+        <p>Valor Máximo</p>
+       </div>
+       <div class="clip_frame grpelem" id="u657"><!-- image -->
+        <img class="block" id="u657_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u2125"><!-- group -->
+       <div class="clearfix grpelem" id="u2124-4"><!-- content -->
+        <p>Bairro</p>
+       </div>
+       <div class="clip_frame grpelem" id="u2126"><!-- image -->
+        <img class="block" id="u2126_img" src="images/botao_baixo.png" alt="" width="36" height="13"/>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- m_editable region-id="editable-static-tag-U1173" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+    <div class="clearfix colelem" id="u1173-4" data-muse-uid="U1173" data-muse-type="txt_frame"><!-- content -->
+     <p>Autorização para Divulgação de Imóvel</p>
+    </div>
+    <!-- /m_editable -->
+    <!-- m_editable region-id="editable-static-tag-U1170" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+    <div class="clearfix colelem" id="u1170-15" data-muse-uid="U1170" data-muse-type="txt_frame"><!-- content -->
+     <p id="u1170-6">Autorizo a <span id="u1170-2">CORRETA SOLUÇÃOES IMOBILIÁRIA – EIRELE</span>, com sede à Rua Dep. Octávio lopes, 400, Centro , Limeira, SP, devidamente credenciada junto ao CRECI/SP, sob nº PJ 25.177, divulgar o imóvel de minha propriedade, sem exclusividade para VENDA e/ou LOCAÇÃO, nos principais meios de comunicação e publicidade como: jornais, revistas, folhetos, sites e etc., com ou sem fotos, no intuito de agilizar a <span id="u1170-4">VENDA e/ou LOCAÇÃO</span>.</p>
+     <p id="u1170-12">O proprietário do imóvel tem ciência de que havendo <span id="u1170-8">demonstração, venda, locação ou qualquer outro tipo de transação comercial </span>realizada pela <span id="u1170-10">CORRETA SOLUÇÃOES IMOBILIÁRIA – EIRELE</span>, no que diz respeito ao referido imóvel, pagará para a mesma, comissão estabelecida pelo (CRECI), isentando desde já a imobiliária de qualquer responsabilidade sobre anúncios publicitários como Placas de Venda ou de Locação.</p>
+     <p>&nbsp;</p>
+    </div>
+    <!-- /m_editable -->
+    <!-- m_editable region-id="editable-static-tag-U1171" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+    <div class="clearfix colelem" id="u1171-4" data-muse-uid="U1171" data-muse-type="txt_frame"><!-- content -->
+     <p>Dados do Proprietário</p>
+    </div>
+    <!-- /m_editable -->
+    <form class="form-grp clearfix colelem" id="widgetu907" method="post" enctype="multipart/form-data" action="scripts/form-u907.php"><!-- none box -->
+     <div class="fld-grp clearfix grpelem" id="widgetu920" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U923" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u923-4" data-muse-uid="U923" data-muse-type="txt_frame" for="widgetu920_input"><!-- content --><span class="actAsPara">Nome:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U922" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u922-4" data-muse-uid="U922" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu920_input" name="custom_U920" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu920_prompt" for="widgetu920_input"><span class="actAsPara">Inserir nome</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U921" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u921-4" data-muse-uid="U921" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu929" data-required="true" data-type="email"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U930" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u930-4" data-muse-uid="U930" data-muse-type="txt_frame" for="widgetu929_input"><!-- content --><span class="actAsPara">e-mail:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U932" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u932-4" data-muse-uid="U932" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu929_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu929_prompt" for="widgetu929_input"><span class="actAsPara">Inserir e-mail</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U931" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u931-4" data-muse-uid="U931" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu944" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U945" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u945-4" data-muse-uid="U945" data-muse-type="txt_frame" for="widgetu944_input"><!-- content --><span class="actAsPara">RG:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U946" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u946-4" data-muse-uid="U946" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu944_input" name="custom_U944" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu944_prompt" for="widgetu944_input"><span class="actAsPara">Inserir nº RG</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U947" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u947-4" data-muse-uid="U947" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu925" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U927" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u927-4" data-muse-uid="U927" data-muse-type="txt_frame" for="widgetu925_input"><!-- content --><span class="actAsPara">CPF:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U926" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u926-4" data-muse-uid="U926" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu925_input" name="custom_U925" tabindex="4"/><label class="wrapped-input fld-prompt" id="widgetu925_prompt" for="widgetu925_input"><span class="actAsPara">Inserir nº CPF</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U928" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u928-4" data-muse-uid="U928" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu938" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U939" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u939-4" data-muse-uid="U939" data-muse-type="txt_frame" for="widgetu938_input"><!-- content --><span class="actAsPara">Endereço Completo:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U941" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u941-4" data-muse-uid="U941" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu938_input" name="custom_U938" tabindex="5"/><label class="wrapped-input fld-prompt" id="widgetu938_prompt" for="widgetu938_input"><span class="actAsPara">Inserir endereço completo com complemento e bairro</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U940" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u940-4" data-muse-uid="U940" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu933" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U936" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u936-4" data-muse-uid="U936" data-muse-type="txt_frame" for="widgetu933_input"><!-- content --><span class="actAsPara">Cidade/Estado:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U934" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u934-4" data-muse-uid="U934" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu933_input" name="custom_U933" tabindex="6"/><label class="wrapped-input fld-prompt" id="widgetu933_prompt" for="widgetu933_input"><span class="actAsPara">Inserir cidade e Estado</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U935" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u935-4" data-muse-uid="U935" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu912" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U914" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u914-4" data-muse-uid="U914" data-muse-type="txt_frame" for="widgetu912_input"><!-- content --><span class="actAsPara">Telefones:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U915" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u915-4" data-muse-uid="U915" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu912_input" name="custom_U912" tabindex="7"/><label class="wrapped-input fld-prompt" id="widgetu912_prompt" for="widgetu912_input"><span class="actAsPara">Insira os Telefones Fixos e&nbsp; Celulares com ddd</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U913" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u913-4" data-muse-uid="U913" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <img class="grpelem" id="u924" alt="Enviando formulário…" src="images/blank.gif"/><!-- state-based BG images -->
+     <img class="grpelem" id="u937" alt="O servidor encontrou um erro." src="images/blank.gif"/><!-- state-based BG images -->
+     <img class="grpelem" id="u943" alt="Formulário recebido." src="images/blank.gif"/><!-- state-based BG images -->
+     <input class="submit-btn NoWrap grpelem" id="u942-17" type="submit" value="" tabindex="21"/><!-- state-based BG images -->
+     <div class="fld-grp clearfix grpelem" id="widgetu1281" data-required="true" data-type="radiogroup"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1282" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1282-4" data-muse-uid="U1282" data-muse-type="txt_frame"><!-- content --><span class="actAsPara">Tipo de Negócio:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1283" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1283-4" data-muse-uid="U1283" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1285" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1286" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1286-4" data-muse-uid="U1286" data-muse-type="txt_frame" for="widgetu1285_input"><!-- content --><span class="actAsPara">Venda</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1288"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Venda" spellcheck="false" id="widgetu1285_input" name="custom_U1281" tabindex="8"/>
+        <label for="widgetu1285_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1319" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1320" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1320-4" data-muse-uid="U1320" data-muse-type="txt_frame" for="widgetu1319_input"><!-- content --><span class="actAsPara">Locação</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1321"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Locação" spellcheck="false" id="widgetu1319_input" name="custom_U1281" tabindex="8"/>
+        <label for="widgetu1319_input"></label>
+       </div>
+      </div>
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1323" data-required="true" data-type="radiogroup"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1331" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1331-4" data-muse-uid="U1331" data-muse-type="txt_frame"><!-- content --><span class="actAsPara">Tipo de imóvel:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1327" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1327-4" data-muse-uid="U1327" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1332" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1333" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1333-4" data-muse-uid="U1333" data-muse-type="txt_frame" for="widgetu1332_input"><!-- content --><span class="actAsPara">Casa</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1334"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Casa" spellcheck="false" id="widgetu1332_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1332_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1335" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1336" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1336-4" data-muse-uid="U1336" data-muse-type="txt_frame" for="widgetu1335_input"><!-- content --><span class="actAsPara">Apartamento</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1337"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Apartamento" spellcheck="false" id="widgetu1335_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1335_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1338" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1340" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1340-4" data-muse-uid="U1340" data-muse-type="txt_frame" for="widgetu1338_input"><!-- content --><span class="actAsPara">Kitinet</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1339"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Kitinet" spellcheck="false" id="widgetu1338_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1338_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1341" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1343" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1343-4" data-muse-uid="U1343" data-muse-type="txt_frame" for="widgetu1341_input"><!-- content --><span class="actAsPara">Casa Comercial</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1342"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Casa Comercial" spellcheck="false" id="widgetu1341_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1341_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1344" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1346" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1346-4" data-muse-uid="U1346" data-muse-type="txt_frame" for="widgetu1344_input"><!-- content --><span class="actAsPara">Barracão</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1345"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Barracão" spellcheck="false" id="widgetu1344_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1344_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1347" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1348" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1348-4" data-muse-uid="U1348" data-muse-type="txt_frame" for="widgetu1347_input"><!-- content --><span class="actAsPara">Galpão</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1349"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Galpão" spellcheck="false" id="widgetu1347_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1347_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1350" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1352" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1352-4" data-muse-uid="U1352" data-muse-type="txt_frame" for="widgetu1350_input"><!-- content --><span class="actAsPara">Chácara</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1351"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Chácara" spellcheck="false" id="widgetu1350_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1350_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1353" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1355" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1355-4" data-muse-uid="U1355" data-muse-type="txt_frame" for="widgetu1353_input"><!-- content --><span class="actAsPara">Fazenda</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1354"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Fazenda" spellcheck="false" id="widgetu1353_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1353_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1356" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1357" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1357-4" data-muse-uid="U1357" data-muse-type="txt_frame" for="widgetu1356_input"><!-- content --><span class="actAsPara">Hotel</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1358"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Hotel" spellcheck="false" id="widgetu1356_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1356_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1359" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1361" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1361-4" data-muse-uid="U1361" data-muse-type="txt_frame" for="widgetu1359_input"><!-- content --><span class="actAsPara">Loja</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1360"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Loja" spellcheck="false" id="widgetu1359_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1359_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1362" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1364" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1364-4" data-muse-uid="U1364" data-muse-type="txt_frame" for="widgetu1362_input"><!-- content --><span class="actAsPara">Usina</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1363"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Usina" spellcheck="false" id="widgetu1362_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1362_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1365" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1366" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1366-4" data-muse-uid="U1366" data-muse-type="txt_frame" for="widgetu1365_input"><!-- content --><span class="actAsPara">Ponto Comercial</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1367"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Ponto Comercial" spellcheck="false" id="widgetu1365_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1365_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1368" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1370" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1370-4" data-muse-uid="U1370" data-muse-type="txt_frame" for="widgetu1368_input"><!-- content --><span class="actAsPara">Prédio</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1369"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Prédio" spellcheck="false" id="widgetu1368_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1368_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1371" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1373" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1373-4" data-muse-uid="U1373" data-muse-type="txt_frame" for="widgetu1371_input"><!-- content --><span class="actAsPara">Prédio Comercial</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1372"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Prédio Comercial" spellcheck="false" id="widgetu1371_input" name="custom_U1323" tabindex="9"/>
+        <label for="widgetu1371_input"></label>
+       </div>
+      </div>
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1382" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1383" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1383-4" data-muse-uid="U1383" data-muse-type="txt_frame" for="widgetu1382_input"><!-- content --><span class="actAsPara">Endereço:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1385" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1385-4" data-muse-uid="U1385" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1382_input" name="custom_U1382" tabindex="10"/><label class="wrapped-input fld-prompt" id="widgetu1382_prompt" for="widgetu1382_input"><span class="actAsPara">Rua, nº e complemento</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1384" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1384-4" data-muse-uid="U1384" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1386" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1389" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1389-4" data-muse-uid="U1389" data-muse-type="txt_frame" for="widgetu1386_input"><!-- content --><span class="actAsPara">Bairro:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1387" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1387-4" data-muse-uid="U1387" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1386_input" name="custom_U1386" tabindex="11"/><label class="wrapped-input fld-prompt" id="widgetu1386_prompt" for="widgetu1386_input"><span class="actAsPara">Inserir Bairro</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1388" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1388-4" data-muse-uid="U1388" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1390" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1393" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1393-4" data-muse-uid="U1393" data-muse-type="txt_frame" for="widgetu1390_input"><!-- content --><span class="actAsPara">Valor do Condomínio:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1391" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1391-4" data-muse-uid="U1391" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1390_input" name="custom_U1390" tabindex="12"/><label class="wrapped-input fld-prompt" id="widgetu1390_prompt" for="widgetu1390_input"><span class="actAsPara">Inserir valor aproximado</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1392" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1392-4" data-muse-uid="U1392" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1394" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1395" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1395-4" data-muse-uid="U1395" data-muse-type="txt_frame" for="widgetu1394_input"><!-- content --><span class="actAsPara">Área Total:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1397" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1397-4" data-muse-uid="U1397" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1394_input" name="custom_U1394" tabindex="13"/><label class="wrapped-input fld-prompt" id="widgetu1394_prompt" for="widgetu1394_input"><span class="actAsPara">Inserir Área Total</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1396" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1396-4" data-muse-uid="U1396" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1398" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1399" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1399-4" data-muse-uid="U1399" data-muse-type="txt_frame" for="widgetu1398_input"><!-- content --><span class="actAsPara">Área Construída:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1401" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1401-4" data-muse-uid="U1401" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1398_input" name="custom_U1398" tabindex="14"/><label class="wrapped-input fld-prompt" id="widgetu1398_prompt" for="widgetu1398_input"><span class="actAsPara">Inserir Área Construída</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1400" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1400-4" data-muse-uid="U1400" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1402" data-required="true" data-type="radiogroup"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1439" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1439-4" data-muse-uid="U1439" data-muse-type="txt_frame"><!-- content --><span class="actAsPara">Dá Financiamento?</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1443" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1443-4" data-muse-uid="U1443" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1447" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1448" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1448-4" data-muse-uid="U1448" data-muse-type="txt_frame" for="widgetu1447_input"><!-- content --><span class="actAsPara">Sim</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1449"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Sim" spellcheck="false" id="widgetu1447_input" name="custom_U1402" tabindex="15"/>
+        <label for="widgetu1447_input"></label>
+       </div>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu1450" data-required="false" data-type="radio"><!-- none box -->
+       <!-- m_editable region-id="editable-static-tag-U1452" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u1452-4" data-muse-uid="U1452" data-muse-type="txt_frame" for="widgetu1450_input"><!-- content --><span class="actAsPara">Não</span></label>
+       <!-- /m_editable -->
+       <div class="fld-radiobutton museBGSize grpelem" id="u1451"><!-- simple frame -->
+        <input class="wrapped-input" type="radio" value="Não" spellcheck="false" id="widgetu1450_input" name="custom_U1402" tabindex="15"/>
+        <label for="widgetu1450_input"></label>
+       </div>
+      </div>
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1512" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1513" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1513-4" data-muse-uid="U1513" data-muse-type="txt_frame" for="widgetu1512_input"><!-- content --><span class="actAsPara">Descreva o imóvel:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1514" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-textarea actAsDiv clearfix grpelem" id="u1514-4" data-muse-uid="U1514" data-muse-type="txt_frame"><!-- content --><textarea class="wrapped-input" id="widgetu1512_input" name="custom_U1512" tabindex="16"></textarea><label class="wrapped-input fld-prompt" id="widgetu1512_prompt" for="widgetu1512_input"><span class="actAsPara">Faça uma descrição completa do imóvel.</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1515" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1515-4" data-muse-uid="U1515" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1516" data-required="false"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1517" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1517-4" data-muse-uid="U1517" data-muse-type="txt_frame" for="widgetu1516_input"><!-- content --><span class="actAsPara">Valor da Locação:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1518" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1518-4" data-muse-uid="U1518" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1516_input" name="custom_U1516" tabindex="17"/><label class="wrapped-input fld-prompt" id="widgetu1516_prompt" for="widgetu1516_input"><span class="actAsPara">Valor pretendido para locação</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1519" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1519-4" data-muse-uid="U1519" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1520" data-required="false"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1523" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1523-4" data-muse-uid="U1523" data-muse-type="txt_frame" for="widgetu1520_input"><!-- content --><span class="actAsPara">Valor de Venda:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1522" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1522-4" data-muse-uid="U1522" data-muse-type="txt_frame"><!-- content --><input class="wrapped-input" type="text" id="widgetu1520_input" name="custom_U1520" tabindex="18"/><label class="wrapped-input fld-prompt" id="widgetu1520_prompt" for="widgetu1520_input"><span class="actAsPara">Valor Pretendido para Venda</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1521" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1521-4" data-muse-uid="U1521" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1524" data-required="true"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1525" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1525-4" data-muse-uid="U1525" data-muse-type="txt_frame" for="widgetu1524_input"><!-- content --><span class="actAsPara">Observações:</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1526" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <span class="fld-textarea actAsDiv clearfix grpelem" id="u1526-4" data-muse-uid="U1526" data-muse-type="txt_frame"><!-- content --><textarea class="wrapped-input" id="widgetu1524_input" name="custom_U1524" tabindex="19"></textarea><label class="wrapped-input fld-prompt" id="widgetu1524_prompt" for="widgetu1524_input"><span class="actAsPara">Acrescente aqui alguma observação que achar necessário</span></label></span>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1527" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1527-4" data-muse-uid="U1527" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+     </div>
+     <div class="fld-grp clearfix grpelem" id="widgetu1559" data-required="true" data-type="checkbox"><!-- none box -->
+      <!-- m_editable region-id="editable-static-tag-U1560" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <label class="fld-label actAsDiv clearfix grpelem" id="u1560-4" data-muse-uid="U1560" data-muse-type="txt_frame" for="widgetu1559_input"><!-- content --><span class="actAsPara">Li e concordo com os termos e condições acima descritos</span></label>
+      <!-- /m_editable -->
+      <!-- m_editable region-id="editable-static-tag-U1562" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+      <div class="fld-message clearfix grpelem" id="u1562-4" data-muse-uid="U1562" data-muse-type="txt_frame"><!-- content -->
+       <p>Obrigatório</p>
+      </div>
+      <!-- /m_editable -->
+      <div class="fld-checkbox museBGSize grpelem" id="u1563"><!-- simple frame -->
+       <input class="wrapped-input" type="checkbox" value="1" id="widgetu1559_input" name="custom_U1559" tabindex="20"/>
+       <label for="widgetu1559_input"></label>
+      </div>
+     </div>
+    </form>
+    <!-- m_editable region-id="editable-static-tag-U1115" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
+    <div class="clearfix colelem" id="u1115-4" data-muse-uid="U1115" data-muse-type="txt_frame"><!-- content -->
+     <p>Dados do Imóvel</p>
+    </div>
+    <!-- /m_editable -->
+    <div class="verticalspacer"></div>
+    <div class="clearfix colelem" id="u718"><!-- group -->
+     <div class="clearfix grpelem" id="u2030-6"><!-- content -->
+      <p id="u2030-2">Nossa Missão:</p>
+      <p>“Entender as Necessidades para atender de forma eficaz e humanizada com qualidade, agilidade e segurança no ramo imobiliário”.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="preload_images">
+   <img class="preload" src="images/u924-fs.png" alt=""/>
+   <img class="preload" src="images/u937-fse.png" alt=""/>
+   <img class="preload" src="images/u943-fss.png" alt=""/>
+   <img class="preload" src="images/u942-17-r.png" alt=""/>
+   <img class="preload" src="images/u942-17-m.png" alt=""/>
+   <img class="preload" src="images/u942-17-fs.png" alt=""/>
+   <img class="preload" src="images/radiobuttonunchecked.png" alt=""/>
+   <img class="preload" src="images/radiobuttonuncheckedrollover.png" alt=""/>
+   <img class="preload" src="images/radiobuttonuncheckedmousedown.png" alt=""/>
+   <img class="preload" src="images/radiobuttonchecked.png" alt=""/>
+   <img class="preload" src="images/radiobuttoncheckedrollover.png" alt=""/>
+   <img class="preload" src="images/radiobuttoncheckedmousedown.png" alt=""/>
+   <img class="preload" src="images/checkboxunchecked.jpg" alt=""/>
+   <img class="preload" src="images/checkboxuncheckedrollover.jpg" alt=""/>
+   <img class="preload" src="images/checkboxuncheckedmousedown.jpg" alt=""/>
+   <img class="preload" src="images/checkboxchecked.jpg" alt=""/>
+   <img class="preload" src="images/checkboxcheckedrollover.jpg" alt=""/>
+   <img class="preload" src="images/checkboxcheckedmousedown.jpg" alt=""/>
+  </div>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script src="scripts/museutils.js?275725342" type="text/javascript"></script>
+  <script src="scripts/jquery.musepolyfill.bgsize.js?185257658" type="text/javascript"></script>
+  <script src="scripts/jquery.scrolleffects.js?206645848" type="text/javascript"></script>
+  <script src="scripts/jquery.musemenu.js?4042164668" type="text/javascript"></script>
+  <script src="scripts/webpro.js?3883484123" type="text/javascript"></script>
+  <script src="scripts/jquery.watch.js?3999102769" type="text/javascript"></script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   $(document).ready(function() { try {
+(function(){var a={},b=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),16);return 0};(function(){$('link[type="text/css"]').each(function(){var b=($(this).attr("href")||"").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);b&&b[1]&&b[2]&&(a[b[1]]=b[2])})})();(function(){$("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
+for(var c=$(".version"),d=0;d<Muse.assets.required.length;){var f=Muse.assets.required[d],g=f.match(/([\w\-\.]+)\.(\w+)$/),k=g&&g[1]?g[1]:null,g=g&&g[2]?g[2]:null;switch(g.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");c.addClass(k);var g=b(c.css("color")),h=b(c.css("background-color"));g!=0||h!=0?(Muse.assets.required.splice(d,1),"undefined"!=typeof a[f]&&(g!=a[f]>>>24||h!=(a[f]&16777215))&&Muse.assets.outOfDate.push(f)):d++;c.removeClass(k);break;case "js":k.match(/^jquery-[\d\.]+/gi)&&
+typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Alguns arquivos no servidor podem estar ausentes ou incorretos. Limpe o cache do navegador e tente novamente. Se o problema persistir, entre em contato com o autor do site.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();
+/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.prepHyperlinks(true);/* body */
+$('.html').registerBackgroundPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,0]},{"speed":[0,1],"in":[0,Infinity]}]);/* scroll effect */
+Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+Muse.Utils.initWidget('#widgetu907', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu907 */
+Muse.Utils.fullPage('#page');/* 100% height page */
+Muse.Utils.showWidgetsWhenReady();/* body */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+} catch(e) { if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e); }});
+</script>
+   </body>
+</html>
