@@ -8,6 +8,20 @@ TIPONEGOCIACAO = (
     ('1', 'Venda'),
 )
 
+class Destaque(models.Model):
+    author = models.ForeignKey('auth.User')
+    imovel = models.ForeignKey('Imovel')
+    data_inicio_divulgacao = models.DateTimeField(
+        blank=True, null=True)
+    data_final_divulgacao = models.DateTimeField(
+        blank=True, null=True)
+
+    def __str__(self):
+        return str(self.imovel.id)+" - "+self.imovel.__str__()
+
+
+
+
 def sample_upload_to_function(instance, filename):
     extension = filename.split('.')[-1]
     return "imoveis/imovel%s/foto%s.%s" %(instance.id, timezone.now().strftime("%d%m%Y%H%M%S"), extension)

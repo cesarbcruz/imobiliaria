@@ -1032,6 +1032,7 @@
 	background-color: #FBB03B;
 	padding-bottom: 6px;
 	top: 304px;
+    box-shadow: inset 1px 1px 4px rgba(255,255,255,0.75), inset -1px -1px 4px rgba(0,0,0,0.75);
 }
 
 #u1880popup

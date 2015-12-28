@@ -231,6 +231,7 @@ a.nontext /* used to override default properties of 'a' tag */
 {
 	display: inline;
 	float: left;
+
 }
 
 .clearfix:after /* force a container to fit around floated items */

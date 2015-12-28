@@ -955,6 +955,23 @@
 	left: 139px;
 }
 
+#mensagem
+{
+	z-index: 124;
+	width: 200px;
+	min-height: 21px;
+	background-color: transparent;
+	padding-top: 4px;
+	color: #1e1eff;
+	font-size: 12px;
+	line-height: 12px;
+	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 158px;
+	left: 139px;
+}
+
 #widgetu761.frm-sub-st #u770-4,#widgetu761.frm-subm-err-st #u776-4,#widgetu761.frm-subm-ok-st #u771-4
 {
 	opacity: 1;
