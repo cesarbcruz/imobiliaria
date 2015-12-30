@@ -411,6 +411,7 @@ textarea
 .MenuBar .SubMenuVisible,.MenuBarVertical .SubMenuVisible,.MenuBar .SubMenu .SubMenuVisible,.popup_element.Active,span.actAsPara,.actAsDiv,a.nonblock.nontext,img.block
 {
 	display: block;
+    #img.block: margin-left: 3px;margin-right: 3px;
 }
 
 .ose_ei

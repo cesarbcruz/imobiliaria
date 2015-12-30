@@ -89,51 +89,42 @@
         </div>
         <div class="shadow rounded-corners clearfix colelem" id="u125"><!-- group -->
             <div class="clearfix grpelem" id="u2133"><!-- group -->
-                <div class="rounded-corners clearfix grpelem" id="u635"><!-- group -->
-                    <div class="clearfix grpelem" id="u636-4"><!-- content -->
-                        <p>Aluguel</p>
+
+                <form action="{% url 'portal.views.home' %}" method="post" class="form">
+                    {% csrf_token %}
+                    <div class="col-xs-5 selectContainer">
+                        <select class="form-control" name="tipo_negocio">
+                            <option value="" selected>O que deseja?</option>
+                            <option value="0">Alugar Imóvel</option>
+                            <option value="1">Comprar Imóvel</option>
+                        </select>
+                        <select class="form-control" name="tipo_imovel">
+                            <option value="" selected>Selecione o tipo do imóvel</option>
+                            {% for ti in tipoimovel %}
+                                <option value="{{ ti.id }}">{{ ti.descricao }}</option>
+                            {% endfor %}
+                        </select>
+                        <select class="form-control" name="valor_maximo">
+                            <option value="" selected>Qualquer Valor</option>
+                            <option value="2">Até R$ 500,00</option>
+                            <option value="3">De R$ 500,00 até R$ 1.000,00</option>
+                            <option value="4">De R$ 1.000,00 até R$ 1.500,00</option>
+                            <option value="5">De R$ 1.500,00 até R$ 2.000,00</option>
+                            <option value="5">De R$ 2.000,00 até R$ 3.000,00</option>
+                            <option value="5">De R$ 3.000,00 até R$ 4.000,00</option>
+                            <option value="5">De R$ 4.000,00 até R$ 6.000,00</option>
+                            <option value="6">Acima de R$ 10.000</option>
+                        </select>
+                        <select class="form-control" name="bairro">
+                            <option value="" selected>Qualquer Bairro</option>
+                            {% for b in bairros %}
+                                <option value="{{ b.id }}">{{ b.descricao }}</option>
+                            {% endfor %}
+                        </select>
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
                     </div>
-                    <div class="clip_frame grpelem" id="u638"><!-- image -->
-                        <img class="block" id="u638_img" src="{% static 'images/botao_baixo.png' %}" alt="" width="36"
-                             height="13"/>
-                    </div>
-                </div>
-                <div class="rounded-corners clearfix grpelem" id="u648"><!-- group -->
-                    <div class="clearfix grpelem" id="u647-4"><!-- content -->
-                        <p>Tipo de Imóvel</p>
-                    </div>
-                    <div class="clip_frame grpelem" id="u644"><!-- image -->
-                        <img class="block" id="u644_img" src="{% static 'images/botao_baixo.png' %}" alt="" width="36"
-                             height="13"/>
-                    </div>
-                </div>
-                <div class="rounded-corners clearfix grpelem" id="u653"><!-- group -->
-                    <div class="clearfix grpelem" id="u652-4"><!-- content -->
-                        <p>Valor Mínimo</p>
-                    </div>
-                    <div class="clip_frame grpelem" id="u649"><!-- image -->
-                        <img class="block" id="u649_img" src="{% static 'images/botao_baixo.png' %}" alt="" width="36"
-                             height="13"/>
-                    </div>
-                </div>
-                <div class="rounded-corners clearfix grpelem" id="u660"><!-- group -->
-                    <div class="clearfix grpelem" id="u656-4"><!-- content -->
-                        <p>Valor Máximo</p>
-                    </div>
-                    <div class="clip_frame grpelem" id="u657"><!-- image -->
-                        <img class="block" id="u657_img" src="{% static 'images/botao_baixo.png' %}" alt="" width="36"
-                             height="13"/>
-                    </div>
-                </div>
-                <div class="rounded-corners clearfix grpelem" id="u2125"><!-- group -->
-                    <div class="clearfix grpelem" id="u2124-4"><!-- content -->
-                        <p>Bairro</p>
-                    </div>
-                    <div class="clip_frame grpelem" id="u2126"><!-- image -->
-                        <img class="block" id="u2126_img" src="{% static 'images/botao_baixo.png' %}" alt="" width="36"
-                             height="13"/>
-                    </div>
-                </div>
+                </form>
+
             </div>
         </div>
         <!-- m_editable region-id="editable-static-tag-U751" template="index.html" data-type="html" data-ice-options="disableImageResize,link" -->
@@ -159,7 +150,7 @@
 
             <div class="popup_anchor" id="u1741popup">
                 <div class="SlideShowContentPanel clearfix" id="u1741"><!-- stack box -->
-                    {% for d in destaques %}
+                    {% for d in destaqueslocacao %}
                         <div class="SSSlide clip_frame clearfix grpelem" id="u1808" data-muse-uid="U1808"
                              data-muse-type="img_frame"><!-- image -->
                             <div id="u1808_clip">
@@ -175,7 +166,7 @@
 
             <div class="popup_anchor" id="u1752popup">
                 <div class="SSSlideLinks shadow clearfix" id="u1752"><!-- horizontal-rows box -->
-                    {% for d in destaques %}
+                    {% for d in destaqueslocacao %}
                         <div class="SSSlideLink clip_frame grpelem" data-muse-uid="U1811"
                              data-muse-type="img_frame"><!-- image -->
                             <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
@@ -191,7 +182,7 @@
         <div class="SlideShowWidget clearfix colelem" id="slideshowu1868"><!-- none box -->
             <div class="popup_anchor" id="u1869popup">
                 <div class="SlideShowContentPanel clearfix" id="u1869"><!-- stack box -->
-                    {% for d in destaques %}
+                    {% for d in destaquesvenda %}
                         <div class="SSSlide clip_frame grpelem" id="u1872" data-muse-uid="U1872"
                              data-muse-type="img_frame">
                             <div>
@@ -206,7 +197,7 @@
             </div>
             <div class="popup_anchor" id="u1880popup">
                 <div class="SSSlideLinks shadow clearfix" id="u1880"><!-- horizontal-rows box -->
-                    {% for d in destaques %}
+                    {% for d in destaquesvenda %}
                         <div class="SSSlideLink clip_frame grpelem" data-muse-uid="U1944" data-muse-type="img_frame">
                             <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
                                  width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>

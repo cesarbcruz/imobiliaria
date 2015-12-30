@@ -1,11 +1,20 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Destaque
+from .models import Destaque, Bairro, TipoImovel
 from django.core.mail import send_mail
 
 def home(request):
-    destaques = Destaque.objects.filter(data_inicio_divulgacao__lte=timezone.now(), data_final_divulgacao__gte=timezone.now()).order_by('data_inicio_divulgacao')
-    return render(request, 'portal/index.html', {'destaques': destaques})
+    bairros = Bairro.objects.all();
+    tipoimovel = TipoImovel.objects.all();
+    destaqueslocacao = Destaque.objects.filter(imovel__tipo_negociacao='0', data_inicio_divulgacao__lte=timezone.now(), data_final_divulgacao__gte=timezone.now()).order_by('data_inicio_divulgacao')
+    destaquesvenda = Destaque.objects.filter(imovel__tipo_negociacao='1', data_inicio_divulgacao__lte=timezone.now(), data_final_divulgacao__gte=timezone.now()).order_by('data_inicio_divulgacao')
+    return render(request, 'portal/index.html', {'destaqueslocacao': destaqueslocacao, 'destaquesvenda' : destaquesvenda, 'bairros' : bairros, 'tipoimovel' : tipoimovel})
+
+def frange(start, stop, step):
+     i = start
+     while i < stop:
+         yield i
+         i += step
 
 def cadastre_seu_imovel(request):
     return render(request, 'portal/cadastre-seu-imovel.html', {})
@@ -17,7 +26,6 @@ def simule_seu_financiamento(request):
     return render(request, 'portal/simule-seu-financiamento.html', {})
 
 def contatos(request):
-
     if request.method == 'GET':
         return render(request, 'portal/contatos.html', {'mensagem':"Preencha todos os campos e selecione Enviar"})
     elif request.method == 'POST':

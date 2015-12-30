@@ -17,7 +17,7 @@ class Destaque(models.Model):
         blank=True, null=True)
 
     def __str__(self):
-        return str(self.imovel.id)+" - "+self.imovel.__str__()
+        return self.imovel.__str__()
 
 
 
@@ -61,7 +61,7 @@ class Imovel(models.Model):
         self.save()
 
     def __str__(self):
-        return self.tipo.descricao+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+", "+self.logradouro
+        return str(self.id)+" - "+self.tipo.descricao+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+", "+self.logradouro
 
 
 class TipoImovel(models.Model):
