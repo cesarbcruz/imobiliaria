@@ -17,14 +17,15 @@
     <title>Home</title>
 
     <!-- bootstrap-->
+
     <link href="{% static 'bootstrap-3.3.6/css/bootstrap.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.6/css/bootstrap.min.css' %}">
-    <script src="{% static 'bootstrap-3.3.6/js/bootstrap.min.js' %}"></script>
-
+    <link href="{% static 'bootstrap-3.3.6/css/bootstrap-responsive.css' %}" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/site_global.css' %}?4052507572"/>
     <link rel="stylesheet" href="{% static 'css/master_a-mestre.css' %}?4095606047"/>
     <link rel="stylesheet" href="{% static 'css/index.css' %}?3824953" id="pagesheet"/>
+    <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
 
     <!-- Other scripts -->
     <script type="text/javascript">
@@ -145,68 +146,71 @@
             {% if imoveis %}
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3>Imóveis encontrados: {{ imoveis|length }}</h3>
-                         <span class="label label-info">{{ descricao_tipo_negocio }}</span>
-                         <span class="label label-info">{{ descricao_tipo_imovel }}</span>
-                    </div>
-                    <table id="table1" class="table table-hover table-striped">
-                        <thead>
-                        <tr bgcolor="#f0ffff">
-                            <th>Imóvel</th>
-                            <th>Valor</th>
-                            <th>Bairro</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for imov in imoveis %}
-                            <tr>
-                                <td>
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <span class="badge">Ref.: {{ imov.id }}</span>
-                                                     {% if imov.quartos > 0 %}
-                                                        <span class="badge">{{ imov.quartos }} quarto(s)</span>
-                                                     {% endif %}
+                <div class="panel-heading">
+                    <h3>Imóveis encontrados: {{ imoveis|length }}</h3>
+                    <span class="label label-default">{{ descricao_tipo_negocio }}</span>
+                    <span class="label label-default">{{ descricao_tipo_imovel }}</span>
+                </div>
+                <div class="table-responsive">
+                <table id="table1" class="table table-hover table-striped">
+                    <thead>
+                    <tr bgcolor="#f0ffff">
+                        <th>Imóvel</th>
+                        <th>Valor</th>
+                        <th>Bairro</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for imov in imoveis %}
+                        <tr>
+                            <td>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge">Ref.: {{ imov.id }}</span>
+                                        {% if imov.quartos > 0 %}
+                                            <span class="badge">{{ imov.quartos }} quarto(s)</span>
+                                        {% endif %}
 
-                                                    {% if imov.banheiro > 0 %}
-                                                        <span class="badge">{{ imov.banheiro }} banheiro(s)</span>
-                                                    {% endif %}
+                                        {% if imov.banheiro > 0 %}
+                                            <span class="badge">{{ imov.banheiro }} banheiro(s)</span>
+                                        {% endif %}
 
-                                                    {% if imov.vagas_garagem > 0 %}
-                                                        <span class="badge">Garagem: {{ imov.vagas_garagem }} vaga(s)</span>
-                                                    {% endif %}
-                                                </div>
+                                        {% if imov.vagas_garagem > 0 %}
+                                            <span class="badge">Garagem: {{ imov.vagas_garagem }} vaga(s)</span>
+                                        {% endif %}
+                                    </div>
 
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <img src="{{ MEDIA_URL }}{{ imov.foto_1.url }}" width="300" height="200"/>
-                                                        </div>
-                                                        <div class="col-md-6">
-
-                                                                <br>
-                                                                {{ imov.descricao }}
-                                                                <br>
-                                                                <button class="btn btn-primary btn"
-                                                                        onclick="window.location.href='{% url 'portal.views.persquisar' %}'; return false;">
-                                                                    Ver Detalhes
-                                                                </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="{{ MEDIA_URL }}{{ imov.foto_1.url }}" width="300"
+                                                     height="200"/>
                                             </div>
+                                            <div class="col-md-6">
+
+                                                <br>
+                                                {{ imov.descricao }}
+                                                <br>
+                                                <button class="btn btn-primary btn"
+                                                        onclick="window.location.href='{% url 'portal.views.persquisar' %}'; return false;">
+                                                    Ver Detalhes
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                                </td>
-                                <td>
-                                    R$ {{ imov.valor }}
-                                </td>
-                                <td>{{ imov.bairro }}</td>
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
+                            </td>
+                            <td>
+                                R$ {{ imov.valor }}
+                            </td>
+                            <td>{{ imov.bairro }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
 
                 </div>
             {% else %}
@@ -216,136 +220,154 @@
                 </div>
             {% endif %}
 
-        </div>
-        <div class="verticalspacer"></div>
-        <div class="gradient clearfix colelem" id="u718"><!-- group -->
-            <div class="clearfix grpelem" id="u2030-6"><!-- content -->
-                <p id="u2030-2">Nossa Missão:</p>
 
-                <p>“Entender as Necessidades para atender de forma eficaz e humanizada com qualidade, agilidade e
-                    segurança
-                    no ramo imobiliário”.</p>
+
+
+
+            </div>
+
+
+
+
+            <div class="verticalspacer"></div>
+
+
+            <div class="gradient clearfix colelem" id="u718"><!-- group -->
+                <div class="clearfix grpelem" id="u2030-6"><!-- content -->
+                    <p id="u2030-2">Nossa Missão:</p>
+
+                    <p>“Entender as Necessidades para atender de forma eficaz e humanizada com qualidade, agilidade e
+                        segurança
+                        no ramo imobiliário”.</p>
+                </div>
+            </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- JS includes -->
-<script type="text/javascript">
-    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-<script type="text/javascript">
-    window.jQuery || document.write('\x3Cscript src="{% static 'scripts/jquery-1.8.3.min.js' %}" type="text/javascript">\x3C/script>');
-</script>
-<script src="{% static 'scripts/museutils.js' %}?275725342" type="text/javascript"></script>
-<script src="{% static 'scripts/jquery.musepolyfill.bgsize.js' %}?185257658" type="text/javascript"></script>
-<script src="{% static 'scripts/jquery.scrolleffects.js' %}?206645848" type="text/javascript"></script>
-<script src="{% static 'scripts/jquery.musemenu.js' %}?4042164668" type="text/javascript"></script>
-<script src="{% static 'scripts/webpro.js' %}?3883484123" type="text/javascript"></script>
-<script src="{% static 'scripts/musewpslideshow.js' %}?360574455" type="text/javascript"></script>
-<script src="{% static 'scripts/jquery.museoverlay.js' %}?342093292" type="text/javascript"></script>
-<script src="{% static 'scripts/touchswipe.js' %}?4218319045" type="text/javascript"></script>
-<script src="{% static 'scripts/jquery.watch.js' %}?3999102769" type="text/javascript"></script>
 
-<!-- Other scripts -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        try {
-            (function () {
-                var a = {}, b = function (a) {
-                    if (a.match(/^rgb/))return a = a.replace(/\s+/g, "").match(/([\d\,]+)/gi)[0].split(","), (parseInt(a[0]) << 16) + (parseInt(a[1]) << 8) + parseInt(a[2]);
-                    if (a.match(/^\#/))return parseInt(a.substr(1), 16);
-                    return 0
-                };
-                (function () {
-                    $('link[type="text/css"]').each(function () {
-                        var b = ($(this).attr("href") || "").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);
-                        b && b[1] && b[2] && (a[b[1]] = b[2])
-                    })
-                })();
-                (function () {
-                    $("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
-                    for (var c = $(".version"), d = 0; d < Muse.assets.required.length;) {
-                        var f = Muse.assets.required[d], g = f.match(/([\w\-\.]+)\.(\w+)$/), k = g && g[1] ? g[1] : null, g = g && g[2] ? g[2] : null;
-                        switch (g.toLowerCase()) {
-                            case "css":
-                                k = k.replace(/\W/gi, "_").replace(/^([^a-z])/gi, "_$1");
-                                c.addClass(k);
-                                var g = b(c.css("color")), h = b(c.css("background-color"));
-                                g != 0 || h != 0 ? (Muse.assets.required.splice(d, 1), "undefined" != typeof a[f] && (g != a[f] >>> 24 || h != (a[f] & 16777215)) && Muse.assets.outOfDate.push(f)) : d++;
-                                c.removeClass(k);
-                                break;
-                            case "js":
-                                k.match(/^jquery-[\d\.]+/gi) &&
-                                typeof $ != "undefined" ? Muse.assets.required.splice(d, 1) : d++;
-                                break;
-                            default:
-                                throw Error("Unsupported file type: " + g);
-                        }
-                    }
-                    c.remove();
-                    if (Muse.assets.outOfDate.length || Muse.assets.required.length)c = "Alguns arquivos no servidor podem estar ausentes ou incorretos. Limpe o cache do navegador e tente novamente. Se o problema persistir, entre em contato com o autor do site.", (d = location && location.search && location.search.match && location.search.match(/muse_debug/gi)) && Muse.assets.outOfDate.length && (c += "\nOut of date: " + Muse.assets.outOfDate.join(",")), d && Muse.assets.required.length && (c += "\nMissing: " + Muse.assets.required.join(",")), alert(c)
-                })()
-            })();
-            /* body */
-            Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();
-            /* body */
-            Muse.Utils.prepHyperlinks(true);
-            /* body */
-            $('.html').registerBackgroundPositionScrollEffect([{
-                "speed": [0, 1],
-                "in": [-Infinity, 0]
-            }, {"speed": [0, 1], "in": [0, Infinity]}]);
-            /* scroll effect */
-            Muse.Utils.initWidget('.MenuBar', function (elem) {
-                return $(elem).museMenu();
+
+        <!-- JS includes -->
+        <script type="text/javascript">
+            if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+        </script>
+        <script type="text/javascript">
+            window.jQuery || document.write('\x3Cscript src="{% static 'scripts/jquery-1.8.3.min.js' %}" type="text/javascript">\x3C/script>');
+        </script>
+        <script src="{% static 'scripts/museutils.js' %}?275725342" type="text/javascript"></script>
+        <script src="{% static 'scripts/jquery.musepolyfill.bgsize.js' %}?185257658" type="text/javascript"></script>
+        <script src="{% static 'scripts/jquery.scrolleffects.js' %}?206645848" type="text/javascript"></script>
+        <script src="{% static 'scripts/jquery.musemenu.js' %}?4042164668" type="text/javascript"></script>
+        <script src="{% static 'scripts/webpro.js' %}?3883484123" type="text/javascript"></script>
+        <script src="{% static 'scripts/musewpslideshow.js' %}?360574455" type="text/javascript"></script>
+        <script src="{% static 'scripts/jquery.museoverlay.js' %}?342093292" type="text/javascript"></script>
+        <script src="{% static 'scripts/touchswipe.js' %}?4218319045" type="text/javascript"></script>
+        <script src="{% static 'scripts/jquery.watch.js' %}?3999102769" type="text/javascript"></script>
+        <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+        <script src="{% static 'bootstrap-3.3.6/js/bootstrap.min.js' %}"></script>
+
+        <!-- Other scripts -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                try {
+                    (function () {
+                        var a = {}, b = function (a) {
+                            if (a.match(/^rgb/))return a = a.replace(/\s+/g, "").match(/([\d\,]+)/gi)[0].split(","), (parseInt(a[0]) << 16) + (parseInt(a[1]) << 8) + parseInt(a[2]);
+                            if (a.match(/^\#/))return parseInt(a.substr(1), 16);
+                            return 0
+                        };
+                        (function () {
+                            $('link[type="text/css"]').each(function () {
+                                var b = ($(this).attr("href") || "").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);
+                                b && b[1] && b[2] && (a[b[1]] = b[2])
+                            })
+                        })();
+                        (function () {
+                            $("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
+                            for (var c = $(".version"), d = 0; d < Muse.assets.required.length;) {
+                                var f = Muse.assets.required[d], g = f.match(/([\w\-\.]+)\.(\w+)$/), k = g && g[1] ? g[1] : null, g = g && g[2] ? g[2] : null;
+                                switch (g.toLowerCase()) {
+                                    case "css":
+                                        k = k.replace(/\W/gi, "_").replace(/^([^a-z])/gi, "_$1");
+                                        c.addClass(k);
+                                        var g = b(c.css("color")), h = b(c.css("background-color"));
+                                        g != 0 || h != 0 ? (Muse.assets.required.splice(d, 1), "undefined" != typeof a[f] && (g != a[f] >>> 24 || h != (a[f] & 16777215)) && Muse.assets.outOfDate.push(f)) : d++;
+                                        c.removeClass(k);
+                                        break;
+                                    case "js":
+                                        k.match(/^jquery-[\d\.]+/gi) &&
+                                        typeof $ != "undefined" ? Muse.assets.required.splice(d, 1) : d++;
+                                        break;
+                                    default:
+                                        throw Error("Unsupported file type: " + g);
+                                }
+                            }
+                            c.remove();
+                            if (Muse.assets.outOfDate.length || Muse.assets.required.length)c = "Alguns arquivos no servidor podem estar ausentes ou incorretos. Limpe o cache do navegador e tente novamente. Se o problema persistir, entre em contato com o autor do site.", (d = location && location.search && location.search.match && location.search.match(/muse_debug/gi)) && Muse.assets.outOfDate.length && (c += "\nOut of date: " + Muse.assets.outOfDate.join(",")), d && Muse.assets.required.length && (c += "\nMissing: " + Muse.assets.required.join(",")), alert(c)
+                        })()
+                    })();
+                    /* body */
+                    Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();
+                    /* body */
+                    Muse.Utils.prepHyperlinks(true);
+                    /* body */
+                    $('.html').registerBackgroundPositionScrollEffect([{
+                        "speed": [0, 1],
+                        "in": [-Infinity, 0]
+                    }, {"speed": [0, 1], "in": [0, Infinity]}]);
+                    /* scroll effect */
+                    Muse.Utils.initWidget('.MenuBar', function (elem) {
+                        return $(elem).museMenu();
+                    });
+                    /* unifiedNavBar */
+                    Muse.Utils.initWidget('#slideshowu1740', function (elem) {
+                        $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {
+                            autoPlay: true,
+                            displayInterval: 3500,
+                            slideLinkStopsSlideShow: false,
+                            transitionStyle: 'fading',
+                            lightboxEnabled_runtime: false,
+                            shuffle: false,
+                            transitionDuration: 500,
+                            enableSwipe: true,
+                            elastic: 'off',
+                            resumeAutoplay: true,
+                            resumeAutoplayInterval: 3000,
+                            playOnce: false,
+                            autoActivate_runtime: false
+                        }));
+                    });
+                    /* #slideshowu1740 */
+                    Muse.Utils.initWidget('#slideshowu1868', function (elem) {
+                        $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {
+                            autoPlay: true,
+                            displayInterval: 3500,
+                            slideLinkStopsSlideShow: false,
+                            transitionStyle: 'fading',
+                            lightboxEnabled_runtime: false,
+                            shuffle: true,
+                            transitionDuration: 500,
+                            enableSwipe: true,
+                            elastic: 'off',
+                            resumeAutoplay: true,
+                            resumeAutoplayInterval: 3000,
+                            playOnce: false,
+                            autoActivate_runtime: false
+                        }));
+                    });
+                    /* #slideshowu1868 */
+                    Muse.Utils.fullPage('#page');
+                    /* 100% height page */
+                    Muse.Utils.showWidgetsWhenReady();
+                    /* body */
+                    Muse.Utils.transformMarkupToFixBrowserProblems();
+                    /* body */
+                } catch (e) {
+                    if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e);
+                }
             });
-            /* unifiedNavBar */
-            Muse.Utils.initWidget('#slideshowu1740', function (elem) {
-                $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {
-                    autoPlay: true,
-                    displayInterval: 3500,
-                    slideLinkStopsSlideShow: false,
-                    transitionStyle: 'fading',
-                    lightboxEnabled_runtime: false,
-                    shuffle: false,
-                    transitionDuration: 500,
-                    enableSwipe: true,
-                    elastic: 'off',
-                    resumeAutoplay: true,
-                    resumeAutoplayInterval: 3000,
-                    playOnce: false,
-                    autoActivate_runtime: false
-                }));
+
+            $(document).ready(function () {
+                $('#table1').dataTable();
             });
-            /* #slideshowu1740 */
-            Muse.Utils.initWidget('#slideshowu1868', function (elem) {
-                $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {
-                    autoPlay: true,
-                    displayInterval: 3500,
-                    slideLinkStopsSlideShow: false,
-                    transitionStyle: 'fading',
-                    lightboxEnabled_runtime: false,
-                    shuffle: true,
-                    transitionDuration: 500,
-                    enableSwipe: true,
-                    elastic: 'off',
-                    resumeAutoplay: true,
-                    resumeAutoplayInterval: 3000,
-                    playOnce: false,
-                    autoActivate_runtime: false
-                }));
-            });
-            /* #slideshowu1868 */
-            Muse.Utils.fullPage('#page');
-            /* 100% height page */
-            Muse.Utils.showWidgetsWhenReady();
-            /* body */
-            Muse.Utils.transformMarkupToFixBrowserProblems();
-            /* body */
-        } catch (e) {
-            if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e);
-        }
-    });
-</script>
+        </script>
 </body>
 </html>
