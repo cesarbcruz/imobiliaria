@@ -1,7 +1,10 @@
+#coding: utf-8
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Destaque, Bairro, TipoImovel
+from .models import Destaque, Bairro, TipoImovel, TIPONEGOCIACAO
 from django.core.mail import send_mail
+from portal.models import Imovel
+
 
 def home(request):
     bairros = Bairro.objects.all();
@@ -10,11 +13,54 @@ def home(request):
     destaquesvenda = Destaque.objects.filter(imovel__tipo_negociacao='1', data_inicio_divulgacao__lte=timezone.now(), data_final_divulgacao__gte=timezone.now()).order_by('data_inicio_divulgacao')
     return render(request, 'portal/index.html', {'destaqueslocacao': destaqueslocacao, 'destaquesvenda' : destaquesvenda, 'bairros' : bairros, 'tipoimovel' : tipoimovel})
 
-def frange(start, stop, step):
-     i = start
-     while i < stop:
-         yield i
-         i += step
+def persquisar(request):
+    bairros = Bairro.objects.all();
+    tipoimovel = TipoImovel.objects.all();
+    if request.method == 'POST':
+        tipo_negocio = request.POST.get("tipo_negocio", "")
+        tipo_imovel = request.POST.get("tipo_imovel", "")
+        valor_maximo = request.POST.get("valor_maximo", "")
+        bairro = request.POST.get("bairro", "")
+        imoveis = None
+        if tipo_negocio and tipo_imovel:
+
+            descricao_tipo_negocio = None
+            if tipo_negocio == '0':
+                descricao_tipo_negocio = 'Alugar Imóvel'
+            elif tipo_negocio == '1':
+                descricao_tipo_negocio = 'Comprar Imóvel'
+
+
+            descricao_tipo_imovel = TipoImovel.objects.get(pk=tipo_imovel).descricao
+
+            imoveis = Imovel.objects.filter(tipo_negociacao = tipo_negocio,tipo__id = tipo_imovel).order_by('id')
+            if valor_maximo:
+                if valor_maximo == '1':
+                    imoveis = imoveis.filter(valor__lte=500.0)
+                elif valor_maximo == '2':
+                    imoveis = imoveis.filter(valor__gte=500.0, valor__lte=1000.0)
+                elif valor_maximo == '3':
+                    imoveis = imoveis.filter(valor__gte=1000.0, valor__lte=1500.0)
+                elif valor_maximo == '4':
+                    imoveis = imoveis.filter(valor__gte=1500.0, valor__lte=2000.0)
+                elif valor_maximo == '5':
+                    imoveis = imoveis.filter(valor__gte=2000.0, valor__lte=3000.0)
+                elif valor_maximo == '6':
+                    imoveis = imoveis.filter(valor__gte=3000.0, valor__lte=4000.0)
+                elif valor_maximo == '7':
+                    imoveis = imoveis.filter(valor__gte=4000.0, valor__lte=6000.0)
+                elif valor_maximo == '8':
+                    imoveis = imoveis.filter(valor__gte=10000.0)
+
+            if bairro:
+                imoveis = imoveis.filter(bairro_id=bairro)
+
+            return render(request, 'portal/pesquisar.html', {'imoveis' : imoveis, 'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : '', 'descricao_tipo_negocio':descricao_tipo_negocio, 'descricao_tipo_imovel' : descricao_tipo_imovel})
+        else:
+            return render(request, 'portal/pesquisar.html', {'imoveis' : imoveis, 'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : 'Selecione o Tipo de Negócio e o Tipo do Imóvel !', 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})
+    else:
+        return render(request, 'portal/pesquisar.html', {'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : '', 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})
+
 
 def cadastre_seu_imovel(request):
     return render(request, 'portal/cadastre-seu-imovel.html', {})

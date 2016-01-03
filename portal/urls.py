@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^documentos/$', views.documentos),
     url(r'^simule_seu_financiamento/$', views.simule_seu_financiamento),
     url(r'^contatos/$', views.contatos),
+    url(r'^pesquisar/$', views.persquisar),
 ]
