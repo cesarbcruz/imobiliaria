@@ -1,5 +1,5 @@
 import os,sys
-virtenv = os.path.expanduser('~') + '/envcorreta/'
+virtenv = os.path.expanduser('~') + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
     if sys.version.split(' ')[0].split('.')[0] == '3':
