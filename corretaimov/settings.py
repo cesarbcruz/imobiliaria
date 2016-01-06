@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7k5b7yj838e@t)4fwol2o7fpe&)e%9zyzri_)m=8e!g2ljn(u4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -106,14 +106,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/dev/howto/static-files/
+MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_local'),
-)
 
 
 STATICFILES_FINDERS = [
@@ -122,11 +116,23 @@ STATICFILES_FINDERS = [
 ]
 
 
-# Setting media configuration
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+if DEBUG:
+    MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
 
+    STATIC_ROOT = '../staticfiles'
+
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+else:
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static_local'),
+    )
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
