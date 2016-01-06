@@ -1,6 +1,6 @@
 import os,sys
 virtenv = os.path.expanduser('~') + '/envcorreta/'
-virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
+virtualenv = os.path.join(virtenv, 'bin/activate')
 try:
     if sys.version.split(' ')[0].split('.')[0] == '3':
         exec(compile(open(virtualenv, "rb").read(), virtualenv, 'exec'), dict(__file__=virtualenv))
