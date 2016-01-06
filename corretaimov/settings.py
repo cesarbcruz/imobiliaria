@@ -116,9 +116,8 @@ STATICFILES_FINDERS = [
 ]
 
 
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_ROOT = 'static_local'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_local')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
