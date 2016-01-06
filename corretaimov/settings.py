@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7k5b7yj838e@t)4fwol2o7fpe&)e%9zyzri_)m=8e!g2ljn(u4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -118,14 +118,6 @@ STATICFILES_FINDERS = [
 
 
 if DEBUG:
-    MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
-
-    STATIC_ROOT = '../staticfiles'
-
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
-    )
-else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -133,6 +125,16 @@ else:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static_local'),
     )
+else:
+    MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+
+    STATIC_ROOT = '../staticfiles'
+
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+
+
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
