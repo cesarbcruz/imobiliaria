@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'portal',
 ]
 
+AUTH_USER_MODEL = 'auth.User'
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

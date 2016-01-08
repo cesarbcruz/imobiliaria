@@ -118,7 +118,7 @@
                     <select class="form-control" name="bairro" id="bairro">
                         <option value="" selected>Qualquer Bairro</option>
                         {% for b in bairros %}
-                            <option value="{{ b.id }}">{{ b.descricao }}</option>
+                            <option value="{{ b.id }}">{{ b }}</option>
                         {% endfor %}
                     </select>
                     <button type="submit" class="bg-primary btn-sm">Pesquisar</button>
@@ -175,11 +175,11 @@
                                             <div class="panel-body">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <img src="{{ MEDIA_URL }}{{ imov.foto_1.url }}" width="300"
-                                                             height="200"/>
+                                                        {% if imov.foto_1 %}
+                                                            <img src="{{ MEDIA_URL }}{{ imov.foto_1.url }}" width="300"  height="200"/>
+                                                        {% endif %}
                                                     </div>
                                                     <div class="col-md-6">
-
                                                         <br>
                                                         {{ imov.descricao }}
                                                         <br>

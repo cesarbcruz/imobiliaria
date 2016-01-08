@@ -116,7 +116,7 @@
                         <select class="form-control" name="bairro" id="bairro">
                             <option value="" selected>Qualquer Bairro</option>
                             {% for b in bairros %}
-                                <option value="{{ b.id }}">{{ b.descricao }}</option>
+                                <option value="{{ b.id }}">{{ b }}</option>
                             {% endfor %}
                         </select>
                         <button type="submit" class="bg-primary btn-sm">Pesquisar</button>
@@ -160,10 +160,12 @@
                         <div class="SSSlide clip_frame clearfix grpelem" id="u1808" data-muse-uid="U1808"
                              data-muse-type="img_frame"><!-- image -->
                             <div id="u1808_clip">
-                                <img class="ImageInclude position_content" id="u1808_img"
-                                     data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
-                                     src="{% static 'images/blank.gif' %}" alt="" data-width="457" data-height="343"
-                                     data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                {% if d.imovel.foto_1 %}
+                                    <img class="ImageInclude position_content" id="u1808_img"
+                                         data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
+                                         src="{% static 'images/blank.gif' %}" alt="" data-width="457" data-height="343"
+                                         data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
@@ -175,8 +177,10 @@
                     {% for d in destaqueslocacao %}
                         <div class="SSSlideLink clip_frame grpelem" data-muse-uid="U1811"
                              data-muse-type="img_frame"><!-- image -->
-                            <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
-                                 width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                            {% if d.imovel.foto_1 %}
+                                <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
+                                     width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
@@ -201,10 +205,12 @@
                         <div class="SSSlide clip_frame grpelem" id="u1872" data-muse-uid="U1872"
                              data-muse-type="img_frame">
                             <div>
+                                {% if d.imovel.foto_1 %}
                                 <img class="block ImageInclude"
                                      data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
                                      src="{% static 'images/blank.gif' %}" alt="" data-width="458" data-height="301"
                                      data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
@@ -214,8 +220,10 @@
                 <div class="SSSlideLinks shadow clearfix" id="u1752"><!-- horizontal-rows box -->
                     {% for d in destaquesvenda %}
                         <div class="SSSlideLink clip_frame grpelem" data-muse-uid="U1944" data-muse-type="img_frame">
-                            <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
-                                 width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                            {% if d.imovel.foto_1 %}
+                                <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
+                                     width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>

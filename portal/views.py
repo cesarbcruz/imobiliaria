@@ -35,22 +35,40 @@ def persquisar(request):
 
             imoveis = Imovel.objects.filter(tipo_negociacao = tipo_negocio,tipo__id = tipo_imovel).order_by('id')
             if valor_maximo:
-                if valor_maximo == '1':
-                    imoveis = imoveis.filter(valor__lte=500.0)
-                elif valor_maximo == '2':
-                    imoveis = imoveis.filter(valor__gte=500.0, valor__lte=1000.0)
-                elif valor_maximo == '3':
-                    imoveis = imoveis.filter(valor__gte=1000.0, valor__lte=1500.0)
-                elif valor_maximo == '4':
-                    imoveis = imoveis.filter(valor__gte=1500.0, valor__lte=2000.0)
-                elif valor_maximo == '5':
-                    imoveis = imoveis.filter(valor__gte=2000.0, valor__lte=3000.0)
-                elif valor_maximo == '6':
-                    imoveis = imoveis.filter(valor__gte=3000.0, valor__lte=4000.0)
-                elif valor_maximo == '7':
-                    imoveis = imoveis.filter(valor__gte=4000.0, valor__lte=6000.0)
-                elif valor_maximo == '8':
-                    imoveis = imoveis.filter(valor__gte=10000.0)
+               if tipo_negocio == '0':
+                    if valor_maximo == '1':
+                        imoveis = imoveis.filter(valor__lte=500.0)
+                    elif valor_maximo == '2':
+                        imoveis = imoveis.filter(valor__gte=500.0, valor__lte=1000.0)
+                    elif valor_maximo == '3':
+                        imoveis = imoveis.filter(valor__gte=1000.0, valor__lte=1500.0)
+                    elif valor_maximo == '4':
+                        imoveis = imoveis.filter(valor__gte=1500.0, valor__lte=2000.0)
+                    elif valor_maximo == '5':
+                        imoveis = imoveis.filter(valor__gte=2000.0, valor__lte=3000.0)
+                    elif valor_maximo == '6':
+                        imoveis = imoveis.filter(valor__gte=3000.0, valor__lte=4000.0)
+                    elif valor_maximo == '7':
+                        imoveis = imoveis.filter(valor__gte=4000.0, valor__lte=6000.0)
+                    elif valor_maximo == '8':
+                        imoveis = imoveis.filter(valor__gte=10000.0)
+               else:
+                    if valor_maximo == '1':
+                        imoveis = imoveis.filter(valor__lte=100000.0)
+                    elif valor_maximo == '2':
+                        imoveis = imoveis.filter(valor__gte=100000.0, valor__lte=150000.0)
+                    elif valor_maximo == '3':
+                        imoveis = imoveis.filter(valor__gte=150000.0, valor__lte=200000.0)
+                    elif valor_maximo == '4':
+                        imoveis = imoveis.filter(valor__gte=200000.0, valor__lte=250000.0)
+                    elif valor_maximo == '5':
+                        imoveis = imoveis.filter(valor__gte=250000.0, valor__lte=300000.0)
+                    elif valor_maximo == '6':
+                        imoveis = imoveis.filter(valor__gte=300000.0, valor__lte=400000.0)
+                    elif valor_maximo == '7':
+                        imoveis = imoveis.filter(valor__gte=400000.0, valor__lte=600000.0)
+                    elif valor_maximo == '8':
+                        imoveis = imoveis.filter(valor__gte=600000.0)
 
             if bairro:
                 imoveis = imoveis.filter(bairro_id=bairro)
