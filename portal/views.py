@@ -33,7 +33,7 @@ def persquisar(request):
 
             descricao_tipo_imovel = TipoImovel.objects.get(pk=tipo_imovel).descricao
 
-            imoveis = Imovel.objects.filter(tipo_negociacao = tipo_negocio,tipo__id = tipo_imovel).order_by('id')
+            imoveis = Imovel.objects.filter(tipo_negociacao = tipo_negocio,tipo__id = tipo_imovel, data_divulgacao__lte=timezone.now()).order_by('id')
             if valor_maximo:
                if tipo_negocio == '0':
                     if valor_maximo == '1':
@@ -114,4 +114,9 @@ def contatos(request):
 
         return render(request, 'portal/contatos.html', {'mensagem':"Mensagem enviada com sucesso!"})
 
+def detalhes_imovel(request, pk):
+    imovel = None;
+    if pk:
+        imovel = Imovel.objects.get(pk=pk)
 
+    return render(request, 'portal/detalhesimovel.html', {'imovel': imovel})

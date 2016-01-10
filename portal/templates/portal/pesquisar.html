@@ -184,9 +184,10 @@
                                                         {{ imov.descricao }}
                                                         <br>
                                                         <button class="btn btn-primary btn"
-                                                                onclick="window.location.href='{% url 'portal.views.persquisar' %}'; return false;">
+                                                                onclick="return popupwindow('{% url 'portal.views.detalhes_imovel' pk=imov.pk %}', 'Detalhes do Imóvel', 941, 800)">
                                                             Ver Detalhes
                                                         </button>
+                                                        <br>
                                                     </div>
                                                 </div>
                                             </div>
@@ -471,6 +472,14 @@
             sel.add(opt, null);
 
         }
+    };
+
+    function popupwindow(url, title, w, h) {
+         var left = Math.round((screen.width/2)-(w/2));
+        var top = Math.round((screen.height/2)-(h/2));
+        return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, '
+                + 'menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' + w
+                + ', height=' + h + ', top=' + top + ', left=' + left);
     }
 </script>
 </body>
