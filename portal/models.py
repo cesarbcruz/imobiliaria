@@ -57,7 +57,7 @@ class Imovel(models.Model):
         verbose_name_plural = "Imoveis"
 
     def __str__(self):
-        return "Ref: "+str(self.id)+" - "+self.tipo.descricao+"_"+self.get_tipo_negociacao()+"_"+self.bairro.descricao+"_"+self.bairro.cidade.descricao+"_"+self.logradouro
+        return "Ref: "+str(self.id)+" - "+self.tipo.descricao+" - "+self.get_tipo_negociacao()+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+" - "+self.logradouro
 
     def get_tipo_negociacao(self):
         return self.get_tipo_negociacao_display()
