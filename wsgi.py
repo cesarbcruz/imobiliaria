@@ -1,6 +1,9 @@
 import os,sys
 from dj_static import Cling
 
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 virtenv = os.path.expanduser('~') + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
