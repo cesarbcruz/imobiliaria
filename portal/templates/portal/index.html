@@ -161,10 +161,12 @@
                              data-muse-type="img_frame"><!-- image -->
                             <div id="u1808_clip">
                                 {% if d.imovel.foto_1 %}
-                                    <img class="ImageInclude position_content" id="u1808_img"
-                                         data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
-                                         src="{% static 'images/blank.gif' %}" alt="" data-width="457" data-height="343"
-                                         data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                    <a onclick="return popupwindow('{% url 'portal.views.detalhes_imovel' pk=d.imovel_id %}', 'Detalhes do Imóvel', 941, 800)">
+                                        <img class="ImageInclude position_content" id="u1808_img"
+                                             data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
+                                             src="{% static 'images/blank.gif' %}" alt="" data-width="457" data-height="343"
+                                             data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"  />
+                                    </a>
                                 {% endif %}
                             </div>
                         </div>
@@ -178,7 +180,7 @@
                         <div class="SSSlideLink clip_frame grpelem" data-muse-uid="U1811"
                              data-muse-type="img_frame"><!-- image -->
                             {% if d.imovel.foto_1 %}
-                                <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
+                                    <img class="block" src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}" alt=""
                                      width="60" height="45" data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
                             {% endif %}
                         </div>
@@ -206,10 +208,12 @@
                              data-muse-type="img_frame">
                             <div>
                                 {% if d.imovel.foto_1 %}
-                                <img class="block ImageInclude"
-                                     data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
-                                     src="{% static 'images/blank.gif' %}" alt="" data-width="458" data-height="301"
-                                     data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                    <a onclick="return popupwindow('{% url 'portal.views.detalhes_imovel' pk=d.imovel_id %}', 'Detalhes do Imóvel', 941, 800)">
+                                        <img class="block ImageInclude"
+                                             data-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"
+                                             src="{% static 'images/blank.gif' %}" alt="" data-width="458" data-height="301"
+                                             data-muse-src="{{ MEDIA_URL }}{{ d.imovel.foto_1.url }}"/>
+                                    </a>
                                 {% endif %}
                             </div>
                         </div>
@@ -242,6 +246,13 @@
         </div>
     </div>
 </div>
+
+<style type="text/css">
+ a:hover {
+  cursor:pointer;
+ }
+</style>
+
 <!-- JS includes -->
 <script type="text/javascript">
     if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
@@ -455,7 +466,15 @@
             sel.add(opt, null);
 
         }
-    }
+    };
+
+     function popupwindow(url, title, w, h) {
+         var left = Math.round((screen.width/2)-(w/2));
+        var top = Math.round((screen.height/2)-(h/2));
+        return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, '
+                + 'menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' + w
+                + ', height=' + h + ', top=' + top + ', left=' + left);
+    };
 
 </script>
 </body>
