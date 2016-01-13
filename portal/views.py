@@ -111,7 +111,7 @@ def cadastre_seu_imovel(request):
         fromaddr = "cesar.analista@gmail.com"
 
         msg="Dados do Proprietário \n"
-        msg+="----------------------\n";
+        msg+="--------------------------------\n";
         msg+="Nome: "+nome+"\n"
         msg+="Email: "+email+"\n"
         msg+="RG: "+rg+"\n"
@@ -121,7 +121,7 @@ def cadastre_seu_imovel(request):
         msg+="Telefones: "+telefones+"\n"
         msg+="\n";
         msg+="Dados do Imóvel \n"
-        msg+="-----------------\n";
+        msg+="--------------------------\n";
         msg+="Endereço: "+endereco+"\n"
         msg+="Bairro: "+bairro+"\n"
         msg+="Valor do Condomínio: "+valorcondominio+"\n"
