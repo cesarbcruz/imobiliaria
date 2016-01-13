@@ -66,7 +66,7 @@ class Imovel(models.Model):
 
 
 class TipoImovel(models.Model):
-    descricao = models.TextField()
+    descricao =  models.CharField( max_length=255 )
     data_inclusao = models.DateTimeField(
         default=timezone.now)
 
@@ -78,7 +78,7 @@ class TipoImovel(models.Model):
 
 
 class Cidade(models.Model):
-    descricao = models.TextField()
+    descricao = models.CharField( max_length=255 )
     data_inclusao = models.DateTimeField(
         default=timezone.now)
 
@@ -87,7 +87,7 @@ class Cidade(models.Model):
 
 
 class Bairro(models.Model):
-    descricao = models.TextField()
+    descricao = models.CharField( max_length=255 )
     cidade = models.ForeignKey('Cidade')
     data_inclusao = models.DateTimeField(
         default=timezone.now)
