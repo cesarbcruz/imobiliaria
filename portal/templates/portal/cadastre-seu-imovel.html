@@ -81,7 +81,8 @@
      <p>Dados do Proprietário</p>
     </div>
     <!-- /m_editable -->
-    <form class="form-grp clearfix colelem" id="widgetu907" method="post" enctype="multipart/form-data" action="scripts/form-u907.php"><!-- none box -->
+    <form class="form-grp clearfix colelem" id="widgetu907" method="post" enctype="multipart/form-data" action="{% url 'portal.views.cadastre_seu_imovel' %}"><!-- none box -->
+        {% csrf_token %}
      <div class="fld-grp clearfix grpelem" id="widgetu920" data-required="true"><!-- none box -->
       <!-- m_editable region-id="editable-static-tag-U923" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->
       <label class="fld-label actAsDiv clearfix grpelem" id="u923-4" data-muse-uid="U923" data-muse-type="txt_frame" for="widgetu920_input"><!-- content --><span class="actAsPara">Nome:</span></label>
@@ -172,10 +173,13 @@
        <p>Obrigatório</p>
       </div>
       <!-- /m_editable -->
+
      </div>
+
      <img class="grpelem" id="u924" alt="Enviando formulário…" src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
      <img class="grpelem" id="u937" alt="O servidor encontrou um erro." src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
      <img class="grpelem" id="u943" alt="Formulário recebido." src="{% static 'images/blank.gif'%}"/><!-- state-based BG images -->
+        <div class="grpelem" id="u943">{{ mensagem }}</div>
      <input class="submit-btn NoWrap grpelem" id="u942-17" type="submit" value="" tabindex="21"/><!-- state-based BG images -->
      <div class="fld-grp clearfix grpelem" id="widgetu1281" data-required="true" data-type="radiogroup"><!-- none box -->
       <!-- m_editable region-id="editable-static-tag-U1282" template="cadastre-seu-imóvel.html" data-type="html" data-ice-options="disableImageResize,link" -->

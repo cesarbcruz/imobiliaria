@@ -81,7 +81,71 @@ def persquisar(request):
 
 
 def cadastre_seu_imovel(request):
-    return render(request, 'portal/cadastre-seu-imovel.html', {})
+    if request.method == 'GET':
+        return render(request, 'portal/cadastre-seu-imovel.html', {'mensagem':"Preencha todos os campos obrigatorios e selecione Enviar"})
+    elif request.method == 'POST':
+        nome = request.POST.get("custom_U920", "")
+        email = request.POST.get("Email", "")
+        rg = request.POST.get("custom_U944", "")
+        cpf = request.POST.get("custom_U925", "")
+        enderecocompleto = request.POST.get("custom_U938", "")
+        cidade = request.POST.get("custom_U933", "")
+        telefones = request.POST.get("custom_U912", "")
+        endereco = request.POST.get("custom_U1382", "")
+        bairro = request.POST.get("custom_U1386", "")
+        valorcondominio = request.POST.get("custom_U1390", "")
+        areatotal = request.POST.get("custom_U1394", "")
+        areaconstruida = request.POST.get("custom_U1398", "")
+        descricao = request.POST.get("custom_U1512", "")
+        valorlocacao = request.POST.get("custom_U1516", "")
+        valorvenda = request.POST.get("custom_U1520", "")
+        observacoes = request.POST.get("custom_U1524", "")
+        dafinanciamento = request.POST.get("custom_U1402", "")
+        tiponegocio = request.POST.get("custom_U1281", "")
+        tipoimovel = request.POST.get("custom_U1323", "")
+
+
+        #toaddrs = "atendimento@corretaimov.com.br"
+        #fromaddr = "atendimento@corretaimov.com.br"
+        toaddrs = "cesar.analista@gmail.com"
+        fromaddr = "cesar.analista@gmail.com"
+
+        msg="Dados do Proprietário \n"
+        msg+="----------------------\n";
+        msg+="Nome: "+nome+"\n"
+        msg+="Email: "+email+"\n"
+        msg+="RG: "+rg+"\n"
+        msg+="CPF: "+cpf+"\n"
+        msg+="Endereço Completo: "+enderecocompleto+"\n"
+        msg+="Cidade/Estado: "+cidade+"\n"
+        msg+="Telefones: "+telefones+"\n"
+        msg+="\n";
+        msg+="Dados do Imóvel \n"
+        msg+="-----------------\n";
+        msg+="Endereço: "+endereco+"\n"
+        msg+="Bairro: "+bairro+"\n"
+        msg+="Valor do Condomínio: "+valorcondominio+"\n"
+        msg+="Tipo de Negócio: "+tiponegocio+"\n"
+        msg+="Tipo de Imóvel: "+tipoimovel+"\n"
+        msg+="\n";
+        msg+="Área Total: "+areatotal+"\n"
+        msg+="Área Construída: "+areaconstruida+"\n"
+        msg+="Descrição do imóvel: "+descricao+"\n"
+        msg+="Valor da Locação: "+valorlocacao+"\n"
+        msg+="Valor de Venda: "+valorvenda+"\n"
+        msg+="Observações: "+observacoes+"\n"
+        msg+="Dá Financiamento?: "+dafinanciamento+"\n"
+
+
+        print(msg)
+
+        try:
+            send_mail('Cadastro de imóvel envio', msg, fromaddr, [toaddrs], fail_silently=False)
+        except:
+            return render(request, 'portal/cadastre-seu-imovel.html', {'mensagem':"Falha ao enviar o cadastro, tente mais tarde!"})
+
+        return render(request, 'portal/cadastre-seu-imovel.html', {'mensagem':"Cadastro enviado com sucesso!"})
+
 
 def documentos(request):
     return render(request, 'portal/documentos.html', {})
@@ -120,3 +184,28 @@ def detalhes_imovel(request, pk):
         imovel = Imovel.objects.get(pk=pk)
 
     return render(request, 'portal/detalhesimovel.html', {'imovel': imovel})
+
+def cadastro_imovel_portal(request):
+    if request.method == 'GET':
+        return render(request, 'portal/contatos.html', {'mensagem':"Preencha todos os campos e selecione Enviar"})
+    elif request.method == 'POST':
+        nome = request.POST.get("custom_U766", "")
+        email = request.POST.get("Email", "")
+        mensagem = request.POST.get("custom_U772", "")
+
+        #toaddrs = "atendimento@corretaimov.com.br"
+        #fromaddr = "atendimento@corretaimov.com.br"
+        toaddrs = "cesar.analista@gmail.com"
+        fromaddr = "cesar.analista@gmail.com"
+
+        msg="Nome: "+nome+"\n"
+        msg+="Email: "+email+"\n"
+        msg+="Mensagem: "+mensagem+"\n"
+        print(msg)
+
+        try:
+            send_mail('Contato do Site', msg, fromaddr, [toaddrs], fail_silently=False)
+        except:
+            return render(request, 'portal/contatos.html', {'mensagem':"Falha ao enviar mensagem, tente mais tarde!"})
+
+        return render(request, 'portal/contatos.html', {'mensagem':"Mensagem enviada com sucesso!"})
