@@ -105,10 +105,8 @@ def cadastre_seu_imovel(request):
         tipoimovel = request.POST.get("custom_U1323", "")
 
 
-        #toaddrs = "atendimento@corretaimov.com.br"
-        #fromaddr = "atendimento@corretaimov.com.br"
-        toaddrs = "cesar.analista@gmail.com"
-        fromaddr = "cesar.analista@gmail.com"
+        toaddrs = "atendimento@corretaimov.com.br"
+        fromaddr = "corretaimovel@gmail.com"
 
         msg="Dados do Proprietário \n"
         msg+="--------------------------------\n";
@@ -161,10 +159,8 @@ def contatos(request):
         email = request.POST.get("Email", "")
         mensagem = request.POST.get("custom_U772", "")
 
-        #toaddrs = "atendimento@corretaimov.com.br"
-        #fromaddr = "atendimento@corretaimov.com.br"
-        toaddrs = "cesar.analista@gmail.com"
-        fromaddr = "cesar.analista@gmail.com"
+        toaddrs = "atendimento@corretaimov.com.br"
+        fromaddr = "corretaimovel@gmail.com"
 
         msg="Nome: "+nome+"\n"
         msg+="Email: "+email+"\n"
@@ -193,10 +189,8 @@ def cadastro_imovel_portal(request):
         email = request.POST.get("Email", "")
         mensagem = request.POST.get("custom_U772", "")
 
-        #toaddrs = "atendimento@corretaimov.com.br"
-        #fromaddr = "atendimento@corretaimov.com.br"
-        toaddrs = "cesar.analista@gmail.com"
-        fromaddr = "cesar.analista@gmail.com"
+        toaddrs = "atendimento@corretaimov.com.br"
+        fromaddr = "corretaimovel@gmail.com"
 
         msg="Nome: "+nome+"\n"
         msg+="Email: "+email+"\n"
