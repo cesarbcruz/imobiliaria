@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Imóvel - Ref: {{ imovel.pk }}</title>
+    <title>Detalhes do Imóvel - Código Referência: {{ imovel.codigo }}</title>
 </head>
 <body style="padding:0px; margin:0px; background-color:#ffffff;">
 <!-- #region Jssor Slider Begin -->
@@ -475,7 +475,7 @@
 
     <h4>
         <span class="label label-danger"><strong>Tipo: </strong>{{ imovel.tipo }}</span>
-        <span class="label label-danger"><strong>Código Referência: </strong>{{ imovel.pk }}</span>
+        <span class="label label-danger"><strong>Código Referência: </strong>{{ imovel.codigo }}</span>
     </h4>
     <h5>
         <strong>Detalhes do Imóvel: </strong><br>
@@ -488,6 +488,9 @@
     {% endif %}
     {% if imovel.banheiro %}
         <span style="font-size: small" class="label label-primary"><strong>Banheiro(s): </strong> {{ imovel.banheiro }}</span>
+    {% endif %}
+    {% if imovel.suites %}
+        <span style="font-size: small" class="label label-primary"><strong>Suíte(s): </strong> {{ imovel.suites }}</span>
     {% endif %}
     {% if imovel.vagas_garagem %}
         <span style="font-size: small" class="label label-primary"><strong>Vaga(s) na
@@ -503,12 +506,11 @@
 
     <h5>
       <strong>Endereço:<br>
-      </strong>{{ imovel.logradouro }}
       {{ imovel.bairro }}<br>
     </h5>
 
     {% if imovel.valor %}
-        <h2><span class="label label-default" style="color: #ffff00">Valor: R$ {{ imovel.valor }}</span></h2>
+        <h2><span class="label label-default" style="color: #ffff00">Valor: {{ imovel.valor_reais }}</span></h2>
     {% endif %}
 </div>
 

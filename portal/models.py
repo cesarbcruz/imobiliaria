@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-
+import locale
 
 TIPONEGOCIACAO = (
     ('0', 'Aluguel'),
@@ -30,12 +30,14 @@ def sample_upload_to_function(instance, filename):
 class Imovel(models.Model):
     usuario = models.ForeignKey(User, null=True, blank=True, editable=False)
     proprietario = models.ForeignKey('Proprietario')
+    codigo = models.CharField( max_length=13, unique=True)
     bairro = models.ForeignKey('Bairro')
     logradouro =  models.TextField()
     quartos = models.IntegerField(blank=True, null=True)
     banheiro = models.IntegerField(blank=True, null=True)
+    suites = models.IntegerField(blank=True, null=True)
     vagas_garagem = models.IntegerField(blank=True, null=True)
-    valor = models.DecimalField(max_digits=8, decimal_places=2)
+    valor = models.DecimalField(max_digits=20, decimal_places=2)
     area_construida = models.DecimalField(blank=True, null=True, max_digits=8, decimal_places=2)
     area_total = models.DecimalField(blank=True, null=True, max_digits=8, decimal_places=2)
     tipo = models.ForeignKey('TipoImovel')
@@ -55,6 +57,11 @@ class Imovel(models.Model):
 
     class Meta:
         verbose_name_plural = "Imoveis"
+
+    def valor_reais(self):
+        locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+        valor = locale.currency(self.valor, grouping=True, symbol=None)
+        return 'R$ %s' % valor
 
     def __str__(self):
         return "Ref: "+str(self.id)+" - "+self.tipo.descricao+" - "+self.get_tipo_negociacao()+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+" - "+self.logradouro

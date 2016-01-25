@@ -1115,8 +1115,7 @@
 {
 	z-index: 96;
 	width: 940px;
-
-	background-color: #FBB03B;
+	background-color: transparent;
 	margin-left: 20px;
 	margin-top: 17px;
 	position: relative;
@@ -1129,6 +1128,27 @@
 	padding-bottom: 7px;
 	margin-left: 19px;
 	margin-top: 95px;
+}
+
+.btn-style{
+	border : solid 1px #000000;
+	border-radius : 1px 3px 3px 3px ;
+	moz-border-radius : 1px 3px 3px 3px ;
+	-webkit-box-shadow : 0px 0px 2px rgba(0,0,0,1.0);
+	-moz-box-shadow : 0px 0px 2px rgba(0,0,0,1.0);
+	box-shadow : 0px 0px 2px rgba(0,0,0,1.0);
+	font-size : 15px;
+	color : #ffffff;
+	padding : 0px 0px;
+	background : #adc6ff;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#adc6ff), color-stop(100%,#1d86cc));
+	background : -moz-linear-gradient(top, #adc6ff 0%, #1d86cc 100%);
+	background : -webkit-linear-gradient(top, #adc6ff 0%, #1d86cc 100%);
+	background : -o-linear-gradient(top, #adc6ff 0%, #1d86cc 100%);
+	background : -ms-linear-gradient(top, #adc6ff 0%, #1d86cc 100%);
+	background : linear-gradient(top, #adc6ff 0%, #1d86cc 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#adc6ff', endColorstr='#1d86cc',GradientType=0 );
+
 }
 
 #u2030-6

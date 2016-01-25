@@ -13,7 +13,7 @@ def home(request):
     destaquesvenda = Destaque.objects.filter(imovel__tipo_negociacao='1', data_inicio_divulgacao__lte=timezone.now(), data_final_divulgacao__gte=timezone.now()).order_by('data_inicio_divulgacao')
     return render(request, 'portal/index.html', {'destaqueslocacao': destaqueslocacao, 'destaquesvenda' : destaquesvenda, 'bairros' : bairros, 'tipoimovel' : tipoimovel})
 
-def persquisar(request):
+def pesquisar(request):
     bairros = Bairro.objects.all();
     tipoimovel = TipoImovel.objects.all();
     if request.method == 'POST':
@@ -203,3 +203,25 @@ def cadastro_imovel_portal(request):
             return render(request, 'portal/contatos.html', {'mensagem':"Falha ao enviar mensagem, tente mais tarde!"})
 
         return render(request, 'portal/contatos.html', {'mensagem':"Mensagem enviada com sucesso!"})
+
+
+
+def pesquisar_por_codigo(request):
+    bairros = Bairro.objects.all();
+    tipoimovel = TipoImovel.objects.all();
+    if request.method == 'POST':
+        codigoreferencia = request.POST.get("codigoreferencia", "")
+        imoveis = None
+        if codigoreferencia:
+
+            imoveis = Imovel.objects.filter(codigo = codigoreferencia.strip(), data_divulgacao__lte=timezone.now()).order_by('id')
+
+            if imoveis:
+                return render(request, 'portal/pesquisar.html', {'imoveis' : imoveis, 'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : '', 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})
+            else:
+                return render(request, 'portal/pesquisar.html', {'imoveis' : imoveis, 'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : 'Esse Código Referência: %s não existe !' % codigoreferencia, 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})
+
+        else:
+            return render(request, 'portal/pesquisar.html', {'imoveis' : imoveis, 'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : 'O Código Referência não foi informado !', 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})
+    else:
+        return render(request, 'portal/pesquisar.html', {'bairros' : bairros, 'tipoimovel': tipoimovel, 'mensagem' : '', 'descricao_tipo_negocio':'', 'descricao_tipo_imovel' : ''})

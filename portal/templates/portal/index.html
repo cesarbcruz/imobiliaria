@@ -96,8 +96,7 @@
         </div>
         <div class="shadow rounded-corners clearfix colelem" id="u125"><!-- group -->
             <div class="clearfix grpelem" id="u2133"><!-- group -->
-
-                <form action="{% url 'portal.views.persquisar' %}" method="post" class="form">
+                <form action="{% url 'portal.views.pesquisar' %}" method="post" class="form">
                     {% csrf_token %}
                         <select class="form-control" name="tipo_negocio" id="tipo_negocio" onchange="adiciona(this)">
                             <option value="" selected>O que deseja?</option>
@@ -119,9 +118,8 @@
                                 <option value="{{ b.id }}">{{ b }}</option>
                             {% endfor %}
                         </select>
-                        <button type="submit" class="bg-primary btn-sm">Pesquisar</button>
+                    <button type="submit" name="btn" class="btn-style">Pesquisar</button>
                 </form>
-
             </div>
         </div>
         <!-- m_editable region-id="editable-static-tag-U751" template="index.html" data-type="html" data-ice-options="disableImageResize,link" -->
@@ -233,7 +231,14 @@
                 </div>
             </div>
         </div>
-        <div class="colelem" id="u752"></div>
+        <div class="colelem" id="u752">
+            <form action="{% url 'portal.views.pesquisar_por_codigo' %}" method="post" class="form">
+                {% csrf_token %}
+                <p style="color: #000000" id="u2030-2">Localizar Imóvel por código de Referência:</p>
+                <input placeholder="000.000.00" style="border: groove" type="text" name="codigoreferencia">
+                <button type="submit" name="btn" class="btn-style">Pesquisar</button>
+            </form>
+        </div>
         <div class="verticalspacer"></div>
         <div class="gradient clearfix colelem" id="u718"><!-- group -->
             <div class="clearfix grpelem" id="u2030-6"><!-- content -->

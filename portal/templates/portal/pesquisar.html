@@ -101,7 +101,7 @@
         <div class="shadow rounded-corners clearfix colelem" id="u125"><!-- group -->
             <div class="clearfix grpelem" id="u2133"><!-- group -->
 
-                <form action="{% url 'portal.views.persquisar' %}" method="post" class="form" name="pesquisa">
+                <form action="{% url 'portal.views.pesquisar' %}" method="post" class="form" name="pesquisa">
                     {% csrf_token %}
                     <select class="form-control" name="tipo_negocio" id="tipo_negocio" onchange="adiciona(this)">
                         <option value="" selected>O que deseja?</option>
@@ -160,13 +160,17 @@
                                     <td>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <span class="badge">Ref.: {{ imov.id }}</span>
+                                                <span class="badge">Código Ref.: {{ imov.codigo }}</span>
                                                 {% if imov.quartos > 0 %}
                                                     <span class="badge">{{ imov.quartos }} quarto(s)</span>
                                                 {% endif %}
 
                                                 {% if imov.banheiro > 0 %}
                                                     <span class="badge">{{ imov.banheiro }} banheiro(s)</span>
+                                                {% endif %}
+
+                                                {% if imov.suites > 0 %}
+                                                    <span class="badge">{{ imov.suites }} suíte(s)</span>
                                                 {% endif %}
 
                                                 {% if imov.vagas_garagem > 0 %}
@@ -198,7 +202,7 @@
 
                                     </td>
                                     <td>
-                                        R$ {{ imov.valor }}
+                                        {{ imov.valor_reais }}
                                     </td>
                                     <td>{{ imov.bairro }}</td>
                                 </tr>
