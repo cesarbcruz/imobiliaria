@@ -64,7 +64,7 @@ class Imovel(models.Model):
         return 'R$ %s' % valor
 
     def __str__(self):
-        return "Ref: "+str(self.id)+" - "+self.tipo.descricao+" - "+self.get_tipo_negociacao()+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+" - "+self.logradouro
+        return "Ref: "+str(self.codigo)+" - "+self.tipo.descricao+" - "+self.get_tipo_negociacao()+" - "+self.bairro.descricao+" - "+self.bairro.cidade.descricao+" - "+self.logradouro
 
     def get_tipo_negociacao(self):
         return self.get_tipo_negociacao_display()
